@@ -39,11 +39,11 @@
 
                 <ul>
 
-                    <li><a href="#">Botox</a></li>
+                    <li><a href="/botox">Botox</a></li>
 
-                    <li><a href="#">Lip Filler</a></li>
+                    <li><a href="/">Lip Filler</a></li>
 
-                    <li><a href="#">Radiesse</a></li>
+                    <li><a href="/radiesse-treatment">Radiesse</a></li>
 
                 </ul>
 
@@ -61,19 +61,11 @@
 
                 <ul>
 
-                    <li>(000) 000-0000</li>
+                    <li> <a href="tel:(317) 572 - 7204">(317) 572 - 7204</a></li>
 
-                    <li>
+                   
 
-                        <a href="mailto:hello@wanderlustaesthetics.com">
-
-                            hello@wanderlustaesthetics.com
-
-                        </a>
-
-                    </li>
-
-                    <li>Carmel, Indiana</li>
+                    <li> <a href="https://www.google.com/maps/place/Wanderlust+Aesthetics/@38.027902,-84.5360113,17.25z/data=!4m6!3m5!1s0x88425da2013bfc65:0xfb269c6ee34faea1!8m2!3d38.0276003!4d-84.5344269!16s%2Fg%2F11j9cwqqlm?entry=tts&g_ep=EgoyMDI2MDEyMS4wIPu8ASoASAFQAw%3D%3D&skid=8958bd05-6da0-4154-af78-14753e537810">1410 S Rangeline Rd, Carmel, IN 46032</a></li>
 
                 </ul>
 
@@ -91,11 +83,12 @@
 
                 <ul>
 
-                    <li><a href="#">Instagram</a></li>
+                    <li><a href="https://www.instagram.com/wanderlustdpc">Instagram</a></li>
 
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61580713015862">Facebook</a></li>
 
-                    <li><a href="#">TikTok</a></li>
+                    <li><a href="https://www.tiktok.com/@wanderlustdpc">TikTok</a></li>
+                    <li><a href="https://x.com/WanderlustDPC">X(Twitter)</a></li>
 
                 </ul>
 
@@ -109,7 +102,7 @@
 
                 © <?php echo date('Y'); ?>
 
-                <?php bloginfo('name'); ?>.
+                Wanderlust Aesthetics.
 
                 All rights reserved.
 
@@ -117,11 +110,11 @@
 
             <div class="footer-links">
 
-                <a href="#">Privacy Policy</a>
+                <a href="https://wanderlustesthetic.com/privacy-policy/">Privacy Policy</a>
 
                 <span>·</span>
 
-                <a href="#">Terms of Service</a>
+                <a href="https://wanderlustesthetic.com/terms-of-service/">Terms of Service</a>
 
             </div>
 

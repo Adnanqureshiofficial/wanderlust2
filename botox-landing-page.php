@@ -44,8 +44,8 @@ $botox_hero_args = [
         ],
 
         [
-            'label' => 'Regular Price',
-            'price' => '$14 / Unit'
+            'label' => '<s>Regular Price</s>',
+            'price' => '<s>$14 / Unit</s>'
         ]
 
     ],
@@ -149,21 +149,11 @@ $botox_social_proof_args = [
     'section_title' =>
         'Real Results.<br>Natural Confidence.',
 
-    'image_url' => get_template_directory_uri() . '/assets/images/botox_patient.png',
+    'video_url' => get_template_directory_uri() . '/assets/images/BOTOX_VO.mp4',
 
     'image_alt' => 'Botox Patient',
 
-    'sign_list' => [
-
-        '"I wanted to look refreshed, not different."',
-
-        '⭐⭐⭐⭐⭐ Google Review',
-
-        'Everyone keeps telling me I look well-rested.  but nobody guessed I had Botox.',
-
-        'Nobody guessed I had Botox.'
-
-    ],
+    'content'=> "I had been thinking about Botox for months before finally booking my appointment. The process was quick, and the provider answered every question I had. The results are subtle, natural, and exactly what I was hoping for. I wish I had done it sooner.",
 
     'cta_text' => 'BOOK MY CONSULTATION',
 

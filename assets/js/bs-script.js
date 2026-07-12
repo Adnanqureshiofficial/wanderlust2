@@ -126,3 +126,31 @@ faqItems.forEach(item => {
     });
 
 });
+
+
+
+// Image SLider
+
+const track = document.querySelector('.slider-track');
+
+if (track) {
+
+    const slides = track.children;
+
+    let index = 0;
+
+    setInterval(() => {
+
+        index++;
+
+        if (index >= slides.length) {
+
+            index = 0;
+
+        }
+
+        track.style.transform = `translateX(-${index * 100}%)`;
+
+    }, 3000);
+
+}

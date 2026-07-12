@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   /* Colors */
@@ -21,7 +21,7 @@
 
   /* Typography */
     --heading-font: "EB Garamond", serif;
-    --body-font: "Inter", sans-serif;
+    --body-font: "Jost", sans-serif;
 
   /* Layout */
 
@@ -564,6 +564,10 @@ p {
   font-style: italic;
 }
 
+#lip_filler_hero {
+  line-height: 1.1;
+}
+
 .hero p {
   max-width: 520px;
 
@@ -679,9 +683,9 @@ p {
 
   font-family: var(--heading-font);
 
-  font-size: 22px;
+  font-size: 26px;
 
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .offer-inner ul {
@@ -872,7 +876,8 @@ p {
 
   .hero .btn,
   .claim-btn {
-    width: 100%;
+    width: 80%;
+    margin:auto;
     font-size: 15px;
     text-align:center
   }
@@ -1321,8 +1326,7 @@ p {
 .pricing-column small {
   display: block;
 
-  color: rgba(255, 255, 255, 0.75);
-
+ 
   margin-bottom: 20px;
 
   letter-spacing: 1px;
@@ -1330,12 +1334,23 @@ p {
   text-transform: uppercase;
 }
 
+.regular-price {
+   color: rgba(255, 255, 255, 0.75);
+ font-weight:560;
+}
+
+.offer-title {
+color:white;
+font-size:16px;
+  font-weight:800;
+}
+
 .old-price {
   font-family: var(--heading-font);
 
   font-size: 54px;
 
-  color: white;
+  color: var(--gold);
 
   text-decoration: line-through;
 }
@@ -1345,7 +1360,7 @@ p {
 
   font-size: 72px;
 
-  color: var(--gold);
+  color: white;
 
   line-height: 1;
 }
@@ -1650,31 +1665,35 @@ p {
 ==========================================*/
 
 .social-grid {
-  display: grid;
-  min-height: 100vh;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
 
-  gap: 70px;
+    height: 100vh;
+    max-height: 100vh;
 
-  align-items: center;
+    align-items: center;
 }
 
-.social-image img {
-  width: 100%;
+.social-video {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  max-width: 520px;
-
-  aspect-ratio: 3/4;
-
-  object-fit: cover;
-
-  border-radius: 20px;
-
-  display: block;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
+.testimonial-video {
+    width: 80%;
+    max-height: 90%;
+    object-fit: cover;
+
+    border-radius: inherit;
+    background: #000;
+    box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
 .section-tag {
   font-size: 22px;
 }
@@ -1716,6 +1735,42 @@ p {
   letter-spacing: 0.5px;
 }
 
+.social-text {
+   margin-bottom: 1.5rem ;
+}
+
+.social-text p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Slider */
+
+.social-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+       width: 80%;
+    max-height: 80%;
+    margin:auto;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform .6s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 @media (max-width: 1024px) {
   .social-grid {
     gap: 60px;
@@ -1735,6 +1790,23 @@ p {
   .social-content .btn {
     align-self: center;
   }
+
+   .social-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        max-height: none;
+        gap: 50px;
+    }
+
+    .social-video {
+        justify-content: center;
+    }
+
+    .testimonial-video {
+        width: 100%;
+        max-width: 700px;
+        max-height: 70vh;
+    }
 }
 
 @media (max-width: 824px) {
@@ -1756,6 +1828,21 @@ p {
   .sign-list li {
     font-size: 15px;
   }
+
+   .social-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .social-video {
+        order: -1; /* Video appears above content */
+    }
+
+    .testimonial-video {
+        width: 100%;
+        max-height: 55vh;
+        border-radius: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1766,6 +1853,16 @@ p {
   .sign-list li {
     padding: 15px 0;
   }
+
+  .social-grid {
+        gap: 30px;
+    }
+
+    .testimonial-video {
+        max-height: 50vh;
+        border-radius: 12px;
+    }
+
 }
 
 /*=========================================

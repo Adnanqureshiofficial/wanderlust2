@@ -36,7 +36,7 @@
 
                     <div class="pricing-column">
 
-                        <small>Regular Price</small>
+                        <small class="regular-price">Regular Price</small>
 
                         <div class="old-price">
                             <?php echo esc_html( $args['regular_price'] ); ?>
@@ -48,7 +48,7 @@
 
                     <div class="pricing-column">
 
-                        <small>Today's Offer</small>
+                        <small class="offer-title">Today's Offer</small>
 
                         <div class="offer-price">
                             <?php echo esc_html( $args['offer_price'] ); ?>

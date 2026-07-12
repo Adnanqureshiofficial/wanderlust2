@@ -21,7 +21,7 @@ $radiesse_hero_args = [
     'main_cta_url' => '#CTAForm',
 
     'voucher_text' =>
-        '✨ <span>Limited-Time Offer</span>',
+        ' ',
 
     'trust_bullets' => [
 
@@ -51,9 +51,9 @@ $radiesse_hero_args = [
 
         [
 
-            'label' => 'Regularly',
+            'label' => '<s>Regularly</s>',
 
-            'price' => '$750',
+            'price' => '<s>$750</s>',
 
             'class' => 'price-old'
 
@@ -352,20 +352,12 @@ $radiesse_pain_points_args = [
 
     'section_title' => 'Real Patients. Real Confidence.',
 
-    'image_url' => get_template_directory_uri() .
-        '/assets/images/bs_social_proof_radiesse.png',
+    'video_url' => get_template_directory_uri() .
+        '/assets/images/BOTOX_VO.mp4',
 
     'image_alt' => 'Radiesse patient testimonial',
 
-    'sign_list' => [
-
-        "“I didn't want to look different. I just wanted to look like myself again. Radiesse gave me exactly that.”",
-
-        '⭐⭐⭐⭐⭐ Google Review',
-
-        
-
-    ],
+   'content' => "As a busy mom. I wanted to invest in myself without looking like I'd had work done. Radiesse gave me a refreshed appearance while keeping everything natural. My skin feels firmer, and I love seeing the gradual improvement. It was worth every penny.",
 
     'cta_text' => 'BOOK MY CONSULTATION',
 

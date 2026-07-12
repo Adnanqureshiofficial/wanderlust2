@@ -10,7 +10,7 @@
             <?php endif; ?>
 
             <!-- Hero Heading (Allows <em> or <br> tags via wp_kses) -->
-            <h1>
+            <h1 id="lip_filler_hero">
                 <?php echo wp_kses( $args['heading'], array( 'br' => array(), 'em' => array() ) ); ?>
             </h1>
 
@@ -94,7 +94,23 @@
 
                                 <span>
 
-                                    <?php echo esc_html( $tier['label'] ); ?>
+                                  <?php
+        echo wp_kses(
+            $tier['label'],
+            array(
+                'br'     => array(),
+                'span'   => array(
+                    'class' => true,
+                    'style' => true,
+                ),
+                'strong' => array(),
+                'em'     => array(),
+                'small'  => array(),
+                 's'      => array(),
+            )
+        );
+        ?>
+
 
                                 </span>
 
@@ -102,9 +118,24 @@
 
                             <?php if ( ! empty( $tier['price'] ) ) : ?>
 
-                                <strong>
+                                <strong class="offer-card-price">
 
-                                    <?php echo esc_html( $tier['price'] ); ?>
+                                   <?php
+        echo wp_kses(
+            $tier['price'],
+            array(
+                'br'     => array(),
+                'span'   => array(
+                    'class' => true,
+                    'style' => true,
+                ),
+                'strong' => array(),
+                'em'     => array(),
+                'small'  => array(),
+                 's'      => array(),
+            )
+        );
+        ?>
 
                                 </strong>
 

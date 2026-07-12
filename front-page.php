@@ -60,23 +60,44 @@ $lip_filler_why_args = [
 
 
 //Social Proof Section
+// Social Proof / Image Slider Section
 $lip_filler_social_args = [
-    // Build the dynamic theme asset URL path here
-    'image_url'     => get_template_directory_uri() . '/assets/images/bs_social_proof.png',
-    'image_alt'     => 'Lip Filler Results Presentation',
-    'section_tag'   => 'SOCIAL PROOF',
-    'section_title' => 'Are you noticing<br>these signs?',
-    'sign_list'     => [
-        'Thinning or flattened lips',
-        'Loss of natural lip definition',
-        'Uneven shape or asymmetry',
-        'Fine lines around the mouth',
-        'Lips that feel less full with age'
-    ],
-    'cta_text'      => 'SEE IF YOU QUALIFY',
-    'cta_url'       => '#CTAForm'
-];
 
+    'image_slider' => [
+
+        get_template_directory_uri() . '/assets/images/botox_patient.png',
+
+        get_template_directory_uri() . '/assets/images/botox_patient.png',
+
+        get_template_directory_uri() . '/assets/images/botox_patient.png',
+
+        get_template_directory_uri() . '/assets/images/botox_patient.png',
+
+    ],
+
+    'section_tag'   => 'SOCIAL PROOF',
+
+    'section_title' => 'Are you noticing<br>these signs?',
+
+    'sign_list' => [
+
+        'Thinning or flattened lips',
+
+        'Loss of natural lip definition',
+
+        'Uneven shape or asymmetry',
+
+        'Fine lines around the mouth',
+
+        'Lips that feel less full with age'
+
+    ],
+
+    'cta_text' => 'SEE IF YOU QUALIFY',
+
+    'cta_url' => '#CTAForm'
+
+];
 
 // Trust Section
 $lip_filler_trust_args = [
@@ -198,7 +219,7 @@ $lip_filler_cta_args = [
 
     <?php  get_template_part( 'template-parts/bs-hero', null, $lip_filler_hero_args ); ?>
         <?php get_template_part( 'template-parts/bs-why-mobile', null, $lip_filler_why_args ); ?>
-  <?php get_template_part( 'template-parts/bs-social-proof', null, $lip_filler_social_args ); ?>
+  <?php get_template_part( 'template-parts/bs-image-slider', null, $lip_filler_social_args ); ?>
 <?php get_template_part( 'template-parts/bs-trust', null, $lip_filler_trust_args ); ?>
 <?php get_template_part( 'template-parts/bs-before-after', null, $lip_filler_compare_args ); ?>
 <?php get_template_part( 'template-parts/bs-urgency', null, $lip_filler_urgency_args );  ?>
