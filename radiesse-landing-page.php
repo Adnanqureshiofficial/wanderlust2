@@ -11,17 +11,19 @@ get_header();
 
 $radiesse_hero_args = [
 
+    'badge_text' => 'LIMITED-TIME OFFER',
+
     'heading' => 'Lift. Restore.<br><em>Rejuvenate.</em> Naturally.',
 
     'description' =>
         'Rediscover firmer, smoother, more youthful-looking skin with physician-led Radiesse treatments that restore lost volume and stimulate your body\'s natural collagen production.',
 
+    // No secondary supporting paragraph for Radiesse
+    'support_text' => '',
+
     'main_cta_text' => 'BOOK MY RADIESSE CONSULTATION',
 
     'main_cta_url' => '#CTAForm',
-
-    'voucher_text' =>
-        ' ',
 
     'trust_bullets' => [
 
@@ -35,58 +37,35 @@ $radiesse_hero_args = [
 
     ],
 
-    'package_title' => 'Radiesse Rejuvenation Package',
+    'card' => [
 
-    'pricing_tiers' => [
+        'title' => 'Radiesse Rejuvenation Package',
 
-        [
+        'subtitle' => 'Special Limited-Time Pricing',
 
-            'label' => 'Special Offer',
+        'pricing' => [
 
-            'price' => '$599',
+            [
 
-            'class' => 'price-large'
+                'label' => 'Special Offer',
 
-        ],
+                'price' => '$599',
 
-        [
+                'regular_price' => '$750'
 
-            'label' => '<s>Regularly</s>',
-
-            'price' => '<s>$750</s>',
-
-            'class' => 'price-old'
+            ]
 
         ],
 
-        [
+        'highlight_text' => 'Save $150 Today',
 
-            'label' => '',
+        'cta_text' => 'BOOK MY RADIESSE CONSULTATION',
 
-            'price' => 'Save $150 Today',
+        'cta_url' => '#CTAForm'
 
-            'class' => 'price-highlight'
-
-        ]
-
-    ],
-
-    'package_features' => [
-
-        'Physician-Led Treatment',
-
-        'Long-Lasting Results',
-
-        'Natural Collagen Stimulation'
-
-    ],
-
-    'card_cta_text' => 'BOOK MY CONSULTATION',
-
-    'card_cta_url' => '#CTAForm'
+    ]
 
 ];
-
 
 /*=========================================================
 = WHY RADIESSE
@@ -215,28 +194,35 @@ $radiesse_before_after_args = [
     'section_description' =>
         'Restore youthful contours, improve skin firmness, and enhance facial structure with results that continue improving over time.',
 
-    'before_image_url' =>
-        get_template_directory_uri() . '/assets/images/before_radiesse.png',
+    'gallery_images' => [
 
-    'after_image_url' =>
-        get_template_directory_uri() . '/assets/images/after_radiesse.png',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ARadiesse/1.png',
+            'alt' => 'Radiesse Treatment Result 1'
+        ],
 
-    'before_image_alt' => 'Before Radiesse',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ARadiesse/2.png',
+            'alt' => 'Radiesse Treatment Result 2'
+        ],
 
-    'after_image_alt' => 'After Radiesse',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ARadiesse/3.png',
+            'alt' => 'Radiesse Treatment Result 3'
+        ],
 
-    'before_label' => 'Before',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ARadiesse/4.png',
+            'alt' => 'Radiesse Treatment Result 4'
+        ],
 
-    'after_label' => 'After',
-
-    'drag_hint_text' => 'Drag the slider to compare.',
+    ],
 
     'cta_text' => 'BOOK MY APPOINTMENT',
 
     'cta_url' => '#CTAForm'
 
 ];
-
 
 /*=========================================================
 = EDUCATION
@@ -265,7 +251,7 @@ $radiesse_education_args = [
 
     'image_url' =>
         get_template_directory_uri() .
-        '/assets/images/how_radiesse_works.png',
+        '/assets/images/B_ARadiesse/How_Radiesse_Work.jpg',
 
     'image_alt' =>
         'Radiesse Treatment'
@@ -353,7 +339,7 @@ $radiesse_pain_points_args = [
     'section_title' => 'Real Patients. Real Confidence.',
 
     'video_url' => get_template_directory_uri() .
-        '/assets/images/BOTOX_VO.mp4',
+        '/assets/images/RADIESSE_VO.mp4',
 
     'image_alt' => 'Radiesse patient testimonial',
 

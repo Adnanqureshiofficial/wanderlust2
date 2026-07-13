@@ -17,13 +17,7 @@ function bs_wanderlust_assets() {
         true
     );
     
-wp_enqueue_script(
-        'before-after',
-        get_template_directory_uri() . '/assets/js/bs-before-after.js',
-        array(),
-        '1.0',
-        true
-    );
+
 }  
 
 

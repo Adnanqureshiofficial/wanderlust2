@@ -11,57 +11,69 @@ get_header();
 
 $botox_hero_args = [
 
-    'badge_text' => 'Limited Time Offer',
+    'badge_text' => 'LIMITED-TIME MODEL CALL',
 
-    'heading' => 'Look Refreshed.<br><em>Never Frozen.</em>',
+    'heading' => 'Be One of Our Selected<br><em>Botox Models.</em>',
 
     'description' =>
-        'Smooth fine lines before they settle deeper with physician-led Botox that keeps your expressions natural and your confidence effortless.',
+        'Natural results. Exclusive pricing.',
 
-    'main_cta_text' => 'BOOK MY BOTOX CONSULTATION',
+    'support_text' =>
+        'We\'re looking for a limited number of qualified Botox model patients to receive physician-led Botox treatment at a special promotional rate in exchange for allowing us to document your results.',
+
+    'main_cta_text' => 'APPLY FOR THE BOTOX MODEL CALL',
 
     'main_cta_url' => '#CTAForm',
 
-    'voucher_text' =>
-        'Limited-Time Pricing | <span>Book your physician consultation today.</span>',
-
     'trust_bullets' => [
+
         'Physician-Led Care',
-        ' Medical-Grade Botox®',
-        'Results in 3-7 Days',
-        
+
+        'Natural Results',
+
+        'FDA-Approved Botox®',
+
+        'Limited-Time Pricing'
+
     ],
 
-    'package_title' => 'Botox Special',
+    'card' => [
 
-    'package_subtitle' => '$9 / Unit (Regularly $14 / Unit)',
+        'title' => 'Botox Model Call Offer',
 
-    'pricing_tiers' => [
+        'subtitle' => 'Exclusive Pricing for Qualified Model Patients',
 
-        [
-            'label' => "Today's Price",
-            'price' => '$9 / Unit'
+        'pricing' => [
+
+            [
+
+                'label' => '$7 / Unit',
+
+                'price' => '$7',
+
+                'regular_price' => '$14 / Unit'
+
+            ]
+
         ],
 
-        [
-            'label' => '<s>Regular Price</s>',
-            'price' => '<s>$14 / Unit</s>'
-        ]
+        'features' => [
 
-    ],
+            'Physician-Led Treatment',
 
-    'package_features' => [
+            'Medical-Grade Botox®',
 
-        'Physician-Led Treatment',
-        'Natural Results',
-        'FDA-Approved Botox®',
-        ' Limited-Time Pricing'
+            'Before & After Documentation',
 
-    ],
+            'Results in 3 to 7 Days'
 
-    'card_cta_text' => 'Book Consultation',
+        ],
 
-    'card_cta_url' => "#CTAForm"
+        'cta_text' => 'APPLY FOR THE BOTOX MODEL CALL',
+
+        'cta_url' => '#CTAForm'
+
+    ]
 
 ];
 
@@ -240,21 +252,29 @@ $botox_before_after_args = [
     'section_description' =>
         'Smooth forehead lines, soften crow\'s feet and relax frown lines while maintaining natural movement.',
 
-    'before_image_url' =>
-        get_template_directory_uri() . '/assets/images/before_botox.png',
+    'gallery_images' => [
 
-    'after_image_url' =>
-        get_template_directory_uri() . '/assets/images/after_botox.png',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ABotox/1.png',
+            'alt' => 'Botox Treatment Result 1'
+        ],
 
-    'before_image_alt' => 'Before Botox',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ABotox/2.png',
+            'alt' => 'Botox Treatment Result 2'
+        ],
 
-    'after_image_alt' => 'After Botox',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ABotox/3.png',
+            'alt' => 'Botox Treatment Result 3'
+        ],
 
-    'before_label' => 'Before',
+        [
+            'url' => get_template_directory_uri() . '/assets/images/B_ABotox/4.png',
+            'alt' => 'Botox Treatment Result 4'
+        ],
 
-    'after_label' => 'After',
-
-    'drag_hint_text' => 'Drag the slider to compare.',
+    ],
 
     'cta_text' => 'BOOK MY APPOINTMENT',
 
@@ -289,7 +309,7 @@ $botox_education_args = [
     ],
 
     'image_url' =>
-        get_template_directory_uri() . '/assets/images/how_botox_works.png',
+        get_template_directory_uri() . '/assets/images/How_Botox_Work.jpg',
 
     'image_alt' => 'Botox Treatment'
 
@@ -304,19 +324,19 @@ $botox_pricing_offer_args = [
 
     'section_tag' => 'LIMITED TIME BOTOX SPECIAL',
 
-    'section_title' => 'Only $9 Per Unit',
+    'section_title' => 'Only $7 Per Unit',
 
     'section_description' =>
         'Limited physician appointments available this month.',
 
     'regular_price' => '$14 /Unit',
 
-    'offer_price' => '$9 /Unit',
+    'offer_price' => '$7 /Unit',
 
     'offer_note' =>
         'Only a limited number of promotional consultations are available this month.',
 
-    'cta_text' => 'CLAIM MY OFFER',
+    'cta_text' => 'APPLY FOR MY MODEL CALL PRICING',
 
     'cta_url' => '#CTAForm'
 
@@ -457,7 +477,7 @@ $botox_final_cta_args = [
     'section_tag' => 'LIMITED TIME',
 
     'section_title' =>
-        'Lock In Your $9 Per Unit Pricing',
+        'Lock In Your $7 Per Unit Pricing',
 
     'section_description' =>
         'Once this promotion ends, Botox returns to its regular price of $14 per unit. Reserve your consultation today.',

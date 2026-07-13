@@ -21,43 +21,26 @@
             <?php endif; ?>
         </div>
 
-        <!-- Slider Comparison Wrapper -->
-        <div class="compare-wrapper">
-            <div class="comparison-slider" id="comparisonSlider">
-                
-                <!-- AFTER IMAGE (Base Layer) -->
+     <div class="results-slider">
+
+    <div class="results-track">
+
+        <?php foreach($args['gallery_images'] as $image): ?>
+
+            <div class="result-slide">
+
                 <img
-                    src="<?php echo esc_url( $args['after_image_url'] ); ?>"
-                    class="comparison-image after-image"
-                    alt="<?php echo esc_attr( $args['after_image_alt'] ); ?>"
+                    src="<?php echo esc_url($image['url']); ?>"
+                    alt="<?php echo esc_attr($image['alt']); ?>"
                 >
 
-                <!-- BEFORE IMAGE (Overlay Clip Layer) -->
-                <div class="comparison-overlay">
-                    <img
-                        src="<?php echo esc_url( $args['before_image_url'] ); ?>"
-                        class="comparison-image before-image"
-                        alt="<?php echo esc_attr( $args['before_image_alt'] ); ?>"
-                    >
-                </div>
-
-                <!-- Divider & Handle Elements -->
-                <div class="comparison-divider">
-                    <div class="comparison-handle">
-                        ↔
-                    </div>
-                </div>
-
-                <!-- Hardcoded Layout Labels -->
-                <span class="label before-label">
-                    <?php echo esc_html( ! empty( $args['before_label'] ) ? $args['before_label'] : 'Before' ); ?>
-                </span>
-                <span class="label after-label">
-                    <?php echo esc_html( ! empty( $args['after_label'] ) ? $args['after_label'] : 'After' ); ?>
-                </span>
-
             </div>
-        </div>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
 
         <!-- Explainer Caption Hint -->
         <?php if ( ! empty( $args['drag_hint_text'] ) ) : ?>

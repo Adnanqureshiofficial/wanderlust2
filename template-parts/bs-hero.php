@@ -1,196 +1,215 @@
 <!-- template-parts/bs-hero.php -->
+
 <section class="hero section">
+
     <div class="container hero-grid">
+
+        <!-- =====================================
+             LEFT CONTENT
+        ====================================== -->
+
         <div class="hero-left">
-            <!-- Badge Text -->
-            <?php if ( ! empty( $args['badge_text'] ) ) : ?>
+
+            <?php if (!empty($args['badge_text'])) : ?>
+
                 <span class="badge">
-                    <?php echo esc_html( $args['badge_text'] ); ?>
+
+                    <?php echo esc_html($args['badge_text']); ?>
+
                 </span>
+
             <?php endif; ?>
 
-            <!-- Hero Heading (Allows <em> or <br> tags via wp_kses) -->
-            <h1 id="lip_filler_hero">
-                <?php echo wp_kses( $args['heading'], array( 'br' => array(), 'em' => array() ) ); ?>
-            </h1>
 
-            <!-- Hero Description -->
-            <p>
-                <?php echo esc_html( $args['description'] ); ?>
-            </p>
+            <?php if (!empty($args['heading'])) : ?>
 
-            <!-- Main CTA Button -->
-            <a href="<?php echo esc_attr( $args['main_cta_url'] ); ?>" class="btn">
-                <?php echo esc_html( $args['main_cta_text'] ); ?>
-            </a>
+                <h1>
 
-            <!-- Voucher Alert Text -->
-            <div class="voucher-text">
-                <?php 
-                // Uses wp_kses to preserve the inner <span> structure
-                echo wp_kses( $args['voucher_text'], array( 'span' => array() ) ); 
-                ?>
-            </div>
+                    <?php
+                    echo wp_kses(
+                        $args['heading'],
+                        [
+                            'br' => [],
+                            'em' => [],
+                            'strong' => [],
+                            'span' => [
+                                'class' => true
+                            ]
+                        ]
+                    );
+                    ?>
 
-            <!-- Trust Bullets Loop -->
-            <?php if ( ! empty( $args['trust_bullets'] ) && is_array( $args['trust_bullets'] ) ) : ?>
-                <div class="hero-trust">
-                    <?php foreach ( $args['trust_bullets'] as $bullet ) : ?>
-                        <div>• <?php echo esc_html( $bullet ); ?></div>
-                    <?php endforeach; ?>
+                </h1>
+
+            <?php endif; ?>
+
+
+            <?php if (!empty($args['description'])) : ?>
+
+                <p class="hero-description">
+
+                    <?php echo esc_html($args['description']); ?>
+
+                </p>
+
+            <?php endif; ?>
+
+
+            <?php if (!empty($args['support_text'])) : ?>
+
+                <div class="hero-support">
+
+                    <?php echo esc_html($args['support_text']); ?>
+
                 </div>
+
             <?php endif; ?>
-        </div>
-
-      <div class="hero-right">
-
-    <?php
-    $has_offer_card =
-        ! empty( $args['package_title'] ) ||
-        ! empty( $args['package_subtitle'] ) ||
-        ! empty( $args['pricing_tiers'] ) ||
-        ! empty( $args['package_features'] ) ||
-        ! empty( $args['card_cta_text'] );
-    ?>
-
-    <?php if ( $has_offer_card ) : ?>
-
-        <div class="offer-card">
-
-            <div class="offer-inner">
-
-                <!-- Package Title -->
-                <?php if ( ! empty( $args['package_title'] ) ) : ?>
-
-                    <h2>
-
-                        <?php echo esc_html( $args['package_title'] ); ?>
-
-                    </h2>
-
-                <?php endif; ?>
 
 
-                <!-- Package Subtitle -->
-                <?php if ( ! empty( $args['package_subtitle'] ) ) : ?>
+            <?php if (!empty($args['main_cta_text'])) : ?>
 
-                    <small>
+                <a
+                    href="<?php echo esc_url($args['main_cta_url']); ?>"
+                    class="btn">
 
-                        <?php echo esc_html( $args['package_subtitle'] ); ?>
+                    <?php echo esc_html($args['main_cta_text']); ?>
 
-                    </small>
+                </a>
 
-                <?php endif; ?>
-
-
-                <!-- Pricing -->
-                <?php if ( ! empty( $args['pricing_tiers'] ) && is_array( $args['pricing_tiers'] ) ) : ?>
-
-                    <?php foreach ( $args['pricing_tiers'] as $tier ) : ?>
-
-                        <div class="price-row">
-
-                            <?php if ( ! empty( $tier['label'] ) ) : ?>
-
-                                <span>
-
-                                  <?php
-        echo wp_kses(
-            $tier['label'],
-            array(
-                'br'     => array(),
-                'span'   => array(
-                    'class' => true,
-                    'style' => true,
-                ),
-                'strong' => array(),
-                'em'     => array(),
-                'small'  => array(),
-                 's'      => array(),
-            )
-        );
-        ?>
+            <?php endif; ?>
 
 
-                                </span>
+            <?php if (!empty($args['trust_bullets']) && is_array($args['trust_bullets'])) : ?>
 
-                            <?php endif; ?>
+                <div class="hero-trust">
 
-                            <?php if ( ! empty( $tier['price'] ) ) : ?>
+                    <?php foreach ($args['trust_bullets'] as $bullet) : ?>
 
-                                <strong class="offer-card-price">
+                        <div class="trust-item">
 
-                                   <?php
-        echo wp_kses(
-            $tier['price'],
-            array(
-                'br'     => array(),
-                'span'   => array(
-                    'class' => true,
-                    'style' => true,
-                ),
-                'strong' => array(),
-                'em'     => array(),
-                'small'  => array(),
-                 's'      => array(),
-            )
-        );
-        ?>
-
-                                </strong>
-
-                            <?php endif; ?>
+                            ✓ <?php echo esc_html($bullet); ?>
 
                         </div>
 
                     <?php endforeach; ?>
 
-                <?php endif; ?>
+                </div>
 
-
-                <!-- Features -->
-                <?php if ( ! empty( $args['package_features'] ) && is_array( $args['package_features'] ) ) : ?>
-
-                    <ul>
-
-                        <?php foreach ( $args['package_features'] as $feature ) : ?>
-
-                            <?php if ( ! empty( $feature ) ) : ?>
-
-                                <li>
-
-                                    <?php echo esc_html( $feature ); ?>
-
-                                </li>
-
-                            <?php endif; ?>
-
-                        <?php endforeach; ?>
-
-                    </ul>
-
-                <?php endif; ?>
-
-
-                <!-- CTA -->
-                <?php if ( ! empty( $args['card_cta_text'] ) ) : ?>
-
-                    <a
-                        href="<?php echo esc_url( ! empty( $args['card_cta_url'] ) ? $args['card_cta_url'] : '#' ); ?>"
-                        class="claim-btn">
-
-                        <?php echo esc_html( $args['card_cta_text'] ); ?>
-
-                    </a>
-
-                <?php endif; ?>
-
-            </div>
+            <?php endif; ?>
 
         </div>
 
-    <?php endif; ?>
 
-</div>
+        <!-- =====================================
+             RIGHT CARD
+        ====================================== -->
+
+        <?php if (!empty($args['card'])) :
+
+            $card = $args['card'];
+
+        ?>
+
+            <div class="hero-right">
+
+                <div class="offer-card">
+
+                    <div class="offer-inner">
+
+                        <?php if (!empty($card['title'])) : ?>
+
+                            <h2>
+
+                                <?php echo esc_html($card['title']); ?>
+
+                            </h2>
+
+                        <?php endif; ?>
+
+
+                        <?php if (!empty($card['subtitle'])) : ?>
+
+                            <small>
+
+                                <?php echo esc_html($card['subtitle']); ?>
+
+                            </small>
+
+                        <?php endif; ?>
+
+
+                        <?php if (!empty($card['pricing']) && is_array($card['pricing'])) : ?>
+
+                            <?php foreach ($card['pricing'] as $tier) : ?>
+
+                                <div class="price-row">
+
+                                    <div class="price-left">
+
+                                        <span class="price-label">
+
+                                            <?php
+                                            echo wp_kses(
+                                                $tier['label'],
+                                                [
+                                                    'br' => [],
+                                                    'strong' => [],
+                                                    'em' => [],
+                                                    'span' => [
+                                                        'class' => true
+                                                    ]
+                                                ]
+                                            );
+                                            ?>
+
+                                        </span>
+
+                                        <?php if (!empty($tier['regular_price'])) : ?>
+
+                                            <small class="old-price">
+
+                                                Regularly <?php echo esc_html($tier['regular_price']); ?>
+
+                                            </small>
+
+                                        <?php endif; ?>
+
+                                    </div>
+
+
+                                    <strong class="offer-card-price">
+
+                                        <?php echo esc_html($tier['price']); ?>
+
+                                    </strong>
+
+                                </div>
+
+                            <?php endforeach; ?>
+
+                        <?php endif; ?>
+
+
+                        <?php if (!empty($card['cta_text'])) : ?>
+
+                            <a
+                                href="<?php echo esc_url($card['cta_url']); ?>"
+                                class="claim-btn">
+
+                                <?php echo esc_html($card['cta_text']); ?>
+
+                            </a>
+
+                        <?php endif; ?>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        <?php endif; ?>
+
     </div>
+
 </section>

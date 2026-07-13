@@ -154,3 +154,33 @@ if (track) {
     }, 3000);
 
 }
+
+
+// Image Slider For Before And After
+
+const sliders = document.querySelectorAll(".results-slider");
+
+sliders.forEach(slider=>{
+
+    const track = slider.querySelector(".results-track");
+
+    const slides = slider.querySelectorAll(".result-slide");
+
+    let index = 0;
+
+    setInterval(()=>{
+
+        index++;
+
+        if(index >= slides.length){
+
+            index = 0;
+
+        }
+
+        track.style.transform =
+            `translateX(-${index*100}%)`;
+
+    },3500);
+
+});

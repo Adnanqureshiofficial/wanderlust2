@@ -6,32 +6,68 @@ get_header();
 
 // Define your (Props) Array for Hero Section
 $lip_filler_hero_args = [
-    'badge_text'       => 'Limited Time Offer',
-    'heading'          => 'Fuller lips,<br><em>naturally</em> you.',
-    'description'      => 'Lip filler creates soft, natural-looking volume and definition that feels effortless — mapped to your face, delivered by a physician.',
-    'main_cta_text'    => 'BOOK MY LIP FILLER CONSULTATION',
-    'main_cta_url'     => '#CTAForm',
-    'voucher_text'     => 'Only <span>50 vouchers</span> available this week',
-    'trust_bullets'    => [
-        'LICENSED PROFESSIONALS',
-        'MEDICAL-GRADE FILLER',
-        'NATURAL RESULTS'
-    ],
-    'package_title'    => 'Lip Filler Package',
-    'package_subtitle' => 'Physician-led | Personalized | Minimal downtime',
-    'pricing_tiers'    => [
-        [ 'label' => 'Half Syringe', 'price' => '$300' ],
-        [ 'label' => 'Full Syringe', 'price' => '$450' ]
-    ],
-    'package_features' => [
-        'Natural Results',
-        'Medical Grade Botox',
-        'Licensed Professionals'
-    ],
-    'card_cta_text'    => 'CLAIM MY VOUCHER',
-    'card_cta_url'     => '#CTAForm'
-];
 
+    'badge_text' => 'LIMITED-TIME MODEL CALL',
+
+    'heading' => 'Be One of Our <em>Selected Lip Filler Models.</em>',
+
+    'description' => 'Natural enhancement. Physician-led treatment. Exclusive pricing for a limited number of qualified patients.',
+
+    'support_text' => 'We\'re looking for a select group of model patients to receive premium lip filler at a special promotional rate while allowing us to document their beautiful results.',
+
+    'main_cta_text' => 'APPLY FOR THE LIP FILLER MODEL CALL',
+
+    'main_cta_url' => '#CTAForm',
+
+    'trust_bullets' => [
+
+        'Physician-Led Treatment',
+
+        'Premium Medical-Grade Fillers',
+
+        'Personalized Lip Mapping',
+
+        'Natural-Looking Results'
+
+    ],
+
+    'card' => [
+
+        'title' => 'Limited-Time Model Call Offer',
+
+        'subtitle' => 'Exclusive Pricing for Qualified Model Patients',
+
+        'pricing' => [
+
+            [
+
+                'label' => 'Half Syringe',
+
+                'price' => '$250',
+
+                'regular_price' => '$300'
+
+            ],
+
+            [
+
+                'label' => 'Full Syringe',
+
+                'price' => '$399',
+
+                'regular_price' => '$450'
+
+            ]
+
+        ],
+
+        'cta_text' => 'APPLY NOW',
+
+        'cta_url' => '#CTAForm'
+
+    ]
+
+];
 
 
 // Define your (Props) Array for Hero Section
@@ -59,21 +95,12 @@ $lip_filler_why_args = [
 ];
 
 
-//Social Proof Section
+
 // Social Proof / Image Slider Section
 $lip_filler_social_args = [
 
-    'image_slider' => [
-
-        get_template_directory_uri() . '/assets/images/botox_patient.png',
-
-        get_template_directory_uri() . '/assets/images/botox_patient.png',
-
-        get_template_directory_uri() . '/assets/images/botox_patient.png',
-
-        get_template_directory_uri() . '/assets/images/botox_patient.png',
-
-    ],
+  'video_url' => get_template_directory_uri() .
+        '/assets/images/RADIESSE_VO.mp4',
 
     'section_tag'   => 'SOCIAL PROOF',
 
@@ -139,18 +166,41 @@ $lip_filler_trust_args = [
 
 // Define data for the Before/After component
 $lip_filler_compare_args = [
-    'section_tag'          => 'BEFORE / AFTER',
-    'section_title'        => 'Real, natural results.',
-    'section_description'  => 'Add subtle volume, restore symmetry and enhance your natural lip shape with expert physician-led filler.',
-    'after_image_url'      => get_template_directory_uri() . '/assets/images/bs_after_lipfill.png',
-    'after_image_alt'      => 'Lip Filler Treatment After Results',
-    'before_image_url'     => get_template_directory_uri() . '/assets/images/bs_before_lipfill.png',
-    'before_image_alt'     => 'Lip Filler Treatment Before Condition',
-    'before_label'         => 'Before', // Fallback defaults handled in template code
-    'after_label'          => 'After',
-    'drag_hint_text'       => '← Drag Left & Right To Compare →',
-    'cta_text'             => 'BOOK MY APPOINTMENT',
-    'cta_url'              => '#CTAForm'
+
+    'section_tag'         => 'BEFORE / AFTER',
+
+    'section_title'       => 'Real, natural results.',
+
+    'section_description' => 'Add subtle volume, restore symmetry and enhance your natural lip shape with expert physician-led filler.',
+
+    'gallery_images' => [
+
+        [
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/3.png',
+            'alt' => 'Lip Filler Result 1'
+        ],
+
+        [
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/4.png',
+            'alt' => 'Lip Filler Result 2'
+        ],
+
+        [
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/5.png',
+            'alt' => 'Lip Filler Result 3'
+        ],
+
+        [
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/6.png',
+            'alt' => 'Lip Filler Result 4'
+        ],
+
+    ],
+
+    'cta_text' => 'BOOK MY APPOINTMENT',
+
+    'cta_url'  => '#CTAForm'
+
 ];
 
 //Urgency Section
@@ -219,7 +269,7 @@ $lip_filler_cta_args = [
 
     <?php  get_template_part( 'template-parts/bs-hero', null, $lip_filler_hero_args ); ?>
         <?php get_template_part( 'template-parts/bs-why-mobile', null, $lip_filler_why_args ); ?>
-  <?php get_template_part( 'template-parts/bs-image-slider', null, $lip_filler_social_args ); ?>
+  <?php get_template_part( 'template-parts/bs-social-proof', null, $lip_filler_social_args ); ?>
 <?php get_template_part( 'template-parts/bs-trust', null, $lip_filler_trust_args ); ?>
 <?php get_template_part( 'template-parts/bs-before-after', null, $lip_filler_compare_args ); ?>
 <?php get_template_part( 'template-parts/bs-urgency', null, $lip_filler_urgency_args );  ?>
