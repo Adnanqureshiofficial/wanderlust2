@@ -184,3 +184,76 @@ sliders.forEach(slider=>{
     },3500);
 
 });
+
+
+
+/**
+ * Contact Form 7 → OptiMantra Redirect
+ * Fires only after successful form submission.
+ */
+
+function formatOptiMantraPhone(phone) {
+
+    // Remove everything except digits
+    let digits = phone.replace(/\D/g, '');
+
+    // If user entered 10 digits, prepend US country code
+    if (digits.length === 10) {
+        digits = '1' + digits;
+    }
+
+    // Validate
+    if (digits.length !== 11) {
+        return null;
+    }
+
+    // Format as 198-765-4321
+    return `${digits.substring(0,3)}-${digits.substring(3,6)}-${digits.substring(6)}`;
+}
+
+
+document.addEventListener('wpcf7submit', function (event) {
+
+    // Convert CF7 input array into an object
+    const formData = {};
+
+    event.detail.inputs.forEach(function (input) {
+        formData[input.name] = input.value;
+    });
+
+    // Retrieve submitted values
+    const firstName = formData['first-name'] || '';
+    const lastName  = formData['last-name'] || '';
+    const email     = formData['email'] || '';
+    const phone = formatOptiMantraPhone(formData['phone']) || '';
+
+    // Build OptiMantra URL
+    const bookingUrl =
+        'https://www.optimantra.com/optimus/patient/patientaccess/practsNslotsNEW'
+        + '?sid=' + encodeURIComponent('bHFYVFI0MTR6elQyS0VidU1jcGxHZz09')
+        + '&pid=' + encodeURIComponent('VWVvNEFOMlZpRFpKSUVnRDhzT2N3UT09')
+        + '&lid=' + encodeURIComponent('RnNvSVQ3YXVEOVlkZndOc25xanBCQT09')
+        + '&first=' + encodeURIComponent(firstName)
+        + '&last=' + encodeURIComponent(lastName)
+        + '&email=' + encodeURIComponent(email)
+         + '&ph=' + encodeURIComponent(phone)
+        + '&addOnSids='
+        + '&additionalReqParamJson='
+        + '&address='
+        + '&city='
+        + '&comments='
+        + '&dob='
+        + '&hideFooterInFrame='
+        + '&hideHeaderInFrame='
+        + '&isMobileApp='
+        + '&selPatId='
+        + '&src='
+        + '&srcid='
+        + '&state='
+        + '&uid='
+        + '&zip=';
+
+    // Redirect to OptiMantra
+    window.location.href = bookingUrl;
+
+});

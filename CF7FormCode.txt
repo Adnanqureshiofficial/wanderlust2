@@ -1,0 +1,58 @@
+In Form Tab
+
+<div class="form-grid">
+
+<div class="form-group">
+
+[text* first-name placeholder "First Name"]
+
+</div>
+
+<div class="form-group">
+
+[text* last-name placeholder "Last Name"]
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+[tel* phone placeholder "Phone Number (e.g. (555) 123-4567)"]
+
+</div>
+
+<div class="form-group">
+
+[email* email placeholder "Email Address"]
+
+</div>
+
+<div class="btn-center">
+
+[submit class:btn class:cta-submit "CLAIM MY SPOT"]
+
+</div>
+
+
+In Mail Tab:
+Message Body:
+New Consultation Request
+
+First Name:
+[first-name]
+
+Last Name:
+[last-name]
+
+Phone:
+[phone]
+
+Email:
+[email]
+
+
+Additional headers:
+Reply-To: [email]
+
+Subjet:New Consultation Request
