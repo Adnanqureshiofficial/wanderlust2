@@ -29,9 +29,9 @@
 
   --header-height: 80px;
 
-  --section-padding: 60px;
+  --section-padding: 55px;
 
-  --hero-card-width: 570px;
+  --hero-card-width: 600px;
 
   --hero-card-height: 700px;
 
@@ -156,7 +156,7 @@ p {
 
   margin: auto;
 
-  font-size: 20px;
+  font-size: 16px;
 
   line-height: 1.7;
 
@@ -218,7 +218,7 @@ p {
 
   align-items: center;
 
-  padding: var(--section-padding) 0;
+  padding: 50px 0;
 
   position: relative;
 }
@@ -685,7 +685,7 @@ p {
 
     color:var(--gold);
 
-    font-size:18px;
+    font-size:19px;
 
   
 
@@ -729,7 +729,7 @@ p {
 
     color:#fff;
 
-    font-size:24px;
+    font-size:28px;
 
     font-weight:500;
 
@@ -737,7 +737,7 @@ p {
 
 .old-price{
 
-    font-size:13px;
+    font-size:15px;
 
     color:rgba(255,255,255,.55);
 
@@ -826,7 +826,7 @@ p {
 
 .hero h1{
 
-    max-width:100%;
+    max-width:88%;
 
 }
 
@@ -897,7 +897,7 @@ p {
 
 .price-label{
 
-    font-size:20px;
+    font-size:24px;
 
 }
 
@@ -909,13 +909,13 @@ p {
 
 .old-price{
 
-    font-size:12px;
+    font-size:15px;
 
 }
 
 .hero-trust{
 
-    flex-direction:column;
+  
 
     gap:12px;
 
@@ -957,8 +957,7 @@ p {
 
 .price-row{
 
-    flex-direction:column;
-
+   
     align-items:flex-start;
 
     gap:10px;
@@ -967,21 +966,21 @@ p {
 
 .price-label{
 
-    font-size:18px;
+    font-size:28px;
 
 }
 
 .offer-card-price{
 
-    font-size:30px;
+    font-size:42px;
 
 }
 
 .hero .btn,
 .claim-btn{
 
-    width:100%;
-
+    width:95%;
+margin:auto;
     font-size:15px;
 
 }
@@ -1281,7 +1280,7 @@ p {
 }
 
 .education .section-title {
-  margin-top: 18px;
+  margin-top: 6px;
 }
 
 .education .section-description {
@@ -1747,23 +1746,23 @@ font-size:16px;
 }
 
 @media (max-width: 768px) {
-  .comparison-header {
-    display: none;
+
+  .comparison-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
+  .comparison-header,
   .comparison-row {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr);
+    min-width: 520px;
   }
 
   .comparison-col {
-    padding: 20px;
+    padding: 18px 20px;
   }
 
-  .comparison-col:first-child {
-    background: #f5f5f5;
-
-    font-weight: 600;
-  }
 }
 /*=========================================
             SOCIAL PROOF
@@ -1785,6 +1784,8 @@ font-size:16px;
     display: flex;
     justify-content: center;
     align-items: center;
+ position:relative;
+    width:100%;
 
     border-radius: 20px;
     overflow: hidden;
@@ -1798,6 +1799,34 @@ font-size:16px;
     border-radius: inherit;
     background: #000;
     box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.video-sound-toggle{
+    position:absolute;
+    right:40px;
+    bottom:20px;
+
+    width:48px;
+    height:48px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(0,0,0,.65);
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+    transition:.25s ease;
+
+    z-index:2;
+}
+
+.video-sound-toggle:hover{
+    background:rgba(0,0,0,.85);
 }
 .section-tag {
   font-size: 22px;
@@ -1941,6 +1970,7 @@ font-size:16px;
 
     .social-video {
         order: -1; /* Video appears above content */
+
     }
 
     .testimonial-video {
@@ -2164,13 +2194,43 @@ font-size:16px;
 
     margin:60px auto;
     
-
+   position: relative;
     overflow:hidden;
 
     border-radius:22px;
 
 }
 
+.slider-toggle{
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    transition: background 0.25s ease;
+
+    z-index: 10;
+}
+
+.slider-toggle:hover{
+    background: rgba(0, 0, 0, 0.85);
+}
 .results-track{
 
     display:flex;
@@ -2413,7 +2473,7 @@ font-size:16px;
   .countdown {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     max-width: 420px;
 
@@ -2466,7 +2526,7 @@ font-size:16px;
 
   align-items: center;
 
-  padding: 34px 0;
+  padding: 15px 0;
 
   cursor: pointer;
 
@@ -2533,7 +2593,7 @@ font-size:16px;
   }
 
   .faq-question {
-    padding: 26px 0;
+    padding: 12px 0;
   }
 
   .faq-question span:first-child {
@@ -2592,7 +2652,8 @@ font-size:16px;
 .final-cta .section-title {
   color: var(--green);
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 5px;
+  font-size: 20px;
 }
 
 .final-cta .section-description {
@@ -2721,11 +2782,11 @@ font-size:16px;
   }
 
   .form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: (2,1fr);
 
     gap: 24px;
 
-    margin-bottom: 24px;
+    margin-bottom: 15px;
   }
 
   .form-group {
@@ -2736,7 +2797,7 @@ font-size:16px;
   .wpcf7-text,
   .wpcf7-email,
   .wpcf7-tel {
-    height: 64px;
+    height: 56px;
   }
 }
 
@@ -2749,9 +2810,9 @@ font-size:16px;
   .form-grid {
     grid-template-columns: 1fr;
 
-    gap: 20px;
+      gap: 1px;
 
-    margin-bottom: 20px;
+      margin-bottom: 1px;
   }
 
   .form-group {
@@ -2893,7 +2954,7 @@ font-size:16px;
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: (2,1fr);
 
     gap: 40px;
 
