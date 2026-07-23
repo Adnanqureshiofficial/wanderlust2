@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Botox Landing Page
+ * Template Name: Botox Landing Page By BS
  */
 
 get_header('landing');
@@ -161,7 +161,7 @@ $botox_social_proof_args = [
     'section_title' =>
         'Real Results.<br>Natural Confidence.',
 
-    'video_url' => get_template_directory_uri() . '/assets/images/bs_assets/BOTOX_VO.mp4',
+    'video_url' => get_template_directory_uri() . '/images/bs_assets/BOTOX_VO.mp4',
 
     'image_alt' => 'Botox Patient',
 
@@ -255,22 +255,22 @@ $botox_before_after_args = [
     'gallery_images' => [
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ABotox/1.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ABotox/1.png',
             'alt' => 'Botox Treatment Result 1'
         ],
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ABotox/2.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ABotox/2.png',
             'alt' => 'Botox Treatment Result 2'
         ],
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ABotox/3.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ABotox/3.png',
             'alt' => 'Botox Treatment Result 3'
         ],
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ABotox/4.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ABotox/4.png',
             'alt' => 'Botox Treatment Result 4'
         ],
 
@@ -309,7 +309,7 @@ $botox_education_args = [
     ],
 
     'image_url' =>
-        get_template_directory_uri() . '/assets/images/bs_assets/How_Botox_Work.jpg',
+        get_template_directory_uri() . '/images/bs_assets/How_Botox_Work.jpg',
 
     'image_alt' => 'Botox Treatment'
 
@@ -341,6 +341,24 @@ $botox_pricing_offer_args = [
     'cta_url' => '#CTAForm'
 
 ];
+
+//Urgency Section
+$botox_urgency_args  = [
+    'section_tag'         => 'URGENT UPDATE',
+    'section_title'       => 'Limited Time Botox Offer',
+    'section_description' => 'Only <strong>7 Consultations Slots</strong> left this month.',
+    
+    // Developer Property: Pass an ISO Date String for your JS clock parsing engine
+    'countdown_date'      => '2026-12-31T23:59:59', 
+    
+    'label_days'          => 'DAYS',
+    'label_hours'         => 'HOURS',
+    'label_minutes'       => 'MINUTES',
+    'label_seconds'       => 'SECONDS',
+    'cta_text'            => 'CLAIM MY VOUCHER NOW',
+    'cta_url'             => '#CTAForm'
+];
+
 
 /* ======================================================
    RESULTS TIMELINE (NEW COMPONENT)
@@ -483,7 +501,7 @@ $botox_final_cta_args = [
         'Once this promotion ends, Botox returns to its regular price of $14 per unit. Reserve your consultation today.',
 
     'form_shortcode' =>
-        '[contact-form-7 id="7d8ba4f" title="CTA Landing Page"]'
+        '[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
 
 ];
 
@@ -494,13 +512,15 @@ $botox_final_cta_args = [
 
 <?php get_template_part('template-parts/bs-why-mobile', null, $botox_why_args); ?>
 
-<?php get_template_part('template-parts/bs-pain-points', null,  $botox_pain_points_args); ?>
-
 <?php get_template_part('template-parts/bs-social-proof', null, $botox_social_proof_args); ?>
+
+<?php get_template_part('template-parts/bs-pain-points', null,  $botox_pain_points_args); ?>
 
 <?php get_template_part('template-parts/bs-trust', null, $botox_trust_args); ?>
 
 <?php get_template_part('template-parts/bs-before-after', null, $botox_before_after_args); ?>
+
+<?php get_template_part( 'template-parts/bs-urgency', null, $botox_urgency_args );  ?>
 
 <?php get_template_part('template-parts/bs-education', null, $botox_education_args); ?>
 

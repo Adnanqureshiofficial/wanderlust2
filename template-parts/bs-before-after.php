@@ -33,6 +33,43 @@
                     src="<?php echo esc_url( $image['url'] ); ?>"
                     alt="<?php echo esc_attr( $image['alt'] ); ?>">
 
+
+<?php if ( ! empty( $image['review'] ) ) : ?>
+
+        <div class="review-card">
+
+            <div class="review-header">
+
+                <img
+                    class="review-profile"
+                    src="<?php echo esc_url( get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png' ); ?>"
+                    alt="Customer Profile">
+
+                <span class="review-name">
+                    <?php echo esc_html( $image['review']['name'] ); ?>
+                </span>
+
+            </div>
+
+            <div class="review-rating">
+
+                <?php
+                $rating = intval( $image['review']['rating'] );
+
+                for ( $i = 0; $i < $rating; $i++ ) {
+                    echo '★';
+                }
+                ?>
+
+            </div>
+
+            <p class="review-text">
+                <?php echo esc_html( $image['review']['text'] ); ?>
+            </p>
+
+        </div>
+
+    <?php endif; ?>
             </div>
 
         <?php endforeach; ?>

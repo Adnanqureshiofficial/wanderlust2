@@ -4,7 +4,7 @@
         <!-- Section Heading Layout -->
         <div class="section-heading">
             <?php if ( ! empty( $args['section_badge'] ) ) : ?>
-                <span class="section-badge">
+                <span class="section-tag">
                     <?php echo esc_html( $args['section_badge'] ); ?>
                 </span>
             <?php endif; ?>

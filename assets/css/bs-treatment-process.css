@@ -1,0 +1,260 @@
+/* CSS scaffold generated */
+/* ==========================================================
+   Timeline
+   ========================================================== */
+
+.treatment-process-timeline {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-top: 80px;
+
+    width: 100%;
+
+}
+
+.timeline-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    width: 170px;
+
+    flex-shrink: 0;
+
+}
+
+.timeline-image {
+
+    width: 90px;
+    height: 90px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    margin-bottom: 18px;
+
+    background: #f6f6f6;
+
+}
+
+.timeline-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+.timeline-item h4 {
+
+    margin: 0;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+}
+
+.timeline-connector {
+
+    flex: 1;
+
+    height: 3px;
+
+    background: rgba(0,0,0,.12);
+
+    margin: 45px 20px 0;
+
+    position: relative;
+
+}
+
+.timeline-connector::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -2px;
+    top: -4px;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--primary-color);
+
+}
+
+
+
+@media (max-width:1200px){
+
+    .treatment-process-layout{
+
+        gap:50px;
+
+    }
+
+    .timeline-item{
+
+        width:140px;
+
+    }
+
+}
+
+
+
+@media (max-width:991px){
+
+    .treatment-process-layout{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .treatment-process-media{
+
+        max-width:700px;
+
+        width:100%;
+
+        margin:0 auto;
+
+    }
+
+    .treatment-process-content{
+
+        justify-content:center;
+
+    }
+
+    .treatment-process-timeline{
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        gap:0;
+
+        padding-bottom:10px;
+
+    }
+
+    .timeline-item{
+
+        width:160px;
+
+    }
+
+    .timeline-connector{
+
+        min-width:80px;
+
+    }
+
+}
+
+
+
+
+@media (max-width:767px){
+
+    .treatment-process-layout{
+
+        margin-top:50px;
+
+    }
+
+    .treatment-process-bullets{
+
+        gap:22px;
+
+    }
+
+    .treatment-process-bullets li{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+        padding-left:34px;
+
+    }
+
+    .timeline-item{
+
+        width:130px;
+
+    }
+
+    .timeline-image{
+
+        width:72px;
+
+        height:72px;
+
+        border-radius:16px;
+
+    }
+
+    .timeline-item h4{
+
+        font-size:.9rem;
+
+    }
+
+}
+
+
+
+
+@media (max-width:480px){
+
+    .treatment-process-layout{
+
+        gap:40px;
+
+    }
+
+    .timeline-item{
+
+        width:120px;
+
+    }
+
+    .timeline-image{
+
+        width:64px;
+
+        height:64px;
+
+    }
+
+    .timeline-connector{
+
+        min-width:60px;
+
+    }
+
+}

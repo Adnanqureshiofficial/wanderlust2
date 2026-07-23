@@ -43,6 +43,10 @@
     fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
+     <script 
+  src="https://link.msgsndr.com/js/external-tracking.js"
+  data-tracking-id="tk_5b1d02b0a2e74264a61cebb282946a32">
+</script>
 
     <?php wp_head(); ?>
 
@@ -67,7 +71,7 @@
         <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
 
             <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/bs_assets/bs-logo.svg"
+                src="<?php echo get_template_directory_uri(); ?>/images/bs_assets/bs-logo.svg"
                 alt="<?php bloginfo('name'); ?>">
 
         </a>
@@ -121,11 +125,11 @@
 
         <ul>
 
-            <li><a href="/lip-filler">Lip Filler</a></li>
+            <li><a href="/lip-filler-bs">Lip Filler</a></li>
 
-            <li><a href="/botox">Botox</a></li>
+            <li><a href="/botox-bs">Botox</a></li>
 
-            <li><a href="/radiesse-treatment">Radiesse</a></li>
+            <li><a href="/radiesse-treatment-bs">Radiesse</a></li>
 
         </ul>
 

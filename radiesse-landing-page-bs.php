@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Radiesse Landing Page
+Template Name: Radiesse Landing Page by BS
 */
 
 get_header('landing');
@@ -197,22 +197,22 @@ $radiesse_before_after_args = [
     'gallery_images' => [
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ARadiesse/1.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ARadiesse/1.png',
             'alt' => 'Radiesse Treatment Result 1'
         ],
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ARadiesse/2.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ARadiesse/2.png',
             'alt' => 'Radiesse Treatment Result 2'
         ],
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ARadiesse/3.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ARadiesse/3.png',
             'alt' => 'Radiesse Treatment Result 3'
         ],
 
         [
-            'url' => get_template_directory_uri() . '/assets/images/bs_assets/B_ARadiesse/4.png',
+            'url' => get_template_directory_uri() . '/images/bs_assets/B_ARadiesse/4.png',
             'alt' => 'Radiesse Treatment Result 4'
         ],
 
@@ -251,7 +251,7 @@ $radiesse_education_args = [
 
     'image_url' =>
         get_template_directory_uri() .
-        '/assets/images/bs_assets/B_ARadiesse/How_Radiesse_Work.jpg',
+        '/images/bs_assets/B_ARadiesse/How_Radiesse_Work.jpg',
 
     'image_alt' =>
         'Radiesse Treatment'
@@ -290,7 +290,7 @@ $radiesse_treatment_areas_args = [
 
     'image_url' =>
         get_template_directory_uri() .
-        '/assets/images/bs_assets/radiesse-treatment-areas.webp',
+        '/images/bs_assets/radiesse-treatment-areas.webp',
 
     'image_alt' =>
         'Radiesse Treatment Areas'
@@ -339,7 +339,7 @@ $radiesse_pain_points_args = [
     'section_title' => 'Real Patients. Real Confidence.',
 
     'video_url' => get_template_directory_uri() .
-        '/assets/images/bs_assets/RADIESSE_VO.mp4',
+        '/images/bs_assets/RADIESSE_VO.mp4',
 
     'image_alt' => 'Radiesse patient testimonial',
 
@@ -583,6 +583,24 @@ $radiesse_faq_args = [
 
 ];
 
+//Urgency Section
+$radiesse_urgency_args  = [
+    'section_tag'         => 'URGENT UPDATE',
+    'section_title'       => 'Limited Time Radiesse Treatment Offer',
+    'section_description' => 'Only <strong>7 Consultations</strong> left this month.',
+    
+    // Developer Property: Pass an ISO Date String for your JS clock parsing engine
+    'countdown_date'      => '2026-12-31T23:59:59', 
+    
+    'label_days'          => 'DAYS',
+    'label_hours'         => 'HOURS',
+    'label_minutes'       => 'MINUTES',
+    'label_seconds'       => 'SECONDS',
+    'cta_text'            => 'CLAIM MY VOUCHER NOW',
+    'cta_url'             => '#CTAForm'
+];
+
+
 
 /*=========================================================
 = FINAL CTA
@@ -597,7 +615,7 @@ $radiesse_final_cta_args = [
     'section_description' =>
         'Experience the collagen-stimulating treatment trusted for natural-looking rejuvenation while enjoying $150 in savings. Appointments are limited.',
 
-     'form_shortcode' => '[contact-form-7 id="7d8ba4f" title="CTA Landing Page"]'
+     'form_shortcode' => '[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
 
 ];
 
@@ -618,15 +636,15 @@ get_template_part(
 );
 
 get_template_part(
-    'template-parts/bs-pain-points',
-    null,
-    $radiesse_pain_points_args
-);
-
-get_template_part(
     'template-parts/bs-social-proof',
     null,
     $radiesse_social_proof_args
+);
+
+get_template_part(
+    'template-parts/bs-pain-points',
+    null,
+    $radiesse_pain_points_args
 );
 
 
@@ -641,6 +659,8 @@ get_template_part(
     null,
     $radiesse_before_after_args
 );
+
+get_template_part( 'template-parts/bs-urgency', null, $radiesse_urgency_args ); 
 
 get_template_part(
     'template-parts/bs-education',

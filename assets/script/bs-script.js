@@ -75,11 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
        // Calculate minutes and seconds
-const minutes = Math.floor(distance / (1000 * 60));
-const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const minutes = Math.floor(distance / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         if (hoursEl) {
     hoursEl.textContent = "00";
+
 }
 
 minutesEl.textContent = String(minutes).padStart(2, "0");
@@ -98,8 +99,52 @@ if (daysEl) {
     // 5. Fire initial calculation and spin up interval loop ticker
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+
+
+    
+   
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const popup = document.getElementById('bs-popup-overlay');
+
+    if (!popup) return;
+
+    // Don't show again during this browser session
+    if (sessionStorage.getItem('bsPopupClosed')) {
+        return;
+    }
+
+    setTimeout(function () {
+
+        popup.classList.add('active');
+
+    }, 5000);
+
+    popup.querySelector('.bs-popup-close').addEventListener('click', function () {
+
+        popup.classList.remove('active');
+
+        sessionStorage.setItem('bsPopupClosed', 'true');
+
+    });
+
+    popup.addEventListener('click', function (e) {
+
+        if (e.target === popup) {
+
+            popup.classList.remove('active');
+
+            sessionStorage.setItem('bsPopupClosed', 'true');
+
+        }
+
+    });
+
+});
 
 /*=========================================
             FAQ ACCORDION
@@ -244,7 +289,7 @@ function formatOptiMantraPhone(phone) {
     // If user entered 10 digits, prepend US country code
     if (digits.length === 10) {
         digits = '1' + digits;
-    }
+    }   
 
     // Validate
     if (digits.length !== 11) {
@@ -258,6 +303,11 @@ function formatOptiMantraPhone(phone) {
 
 document.addEventListener('wpcf7submit', function (event) {
 
+    // Redirect only after a successful CF7 submission
+    if (event.detail.status !== 'mail_sent') {
+        return;
+    }
+
     // Convert CF7 input array into an object
     const formData = {};
 
@@ -269,18 +319,51 @@ document.addEventListener('wpcf7submit', function (event) {
     const firstName = formData['first-name'] || '';
     const lastName  = formData['last-name'] || '';
     const email     = formData['email'] || '';
-    const phone = formatOptiMantraPhone(formData['phone']) || '';
+    const phone     = formatOptiMantraPhone(formData['phone']) || '';
+
+    // Detect current landing page
+    const path = window.location.pathname.toLowerCase();
+
+    let sid, unCryptedSid, pid, lid;
+
+    if (path.includes('lip-filler')) {
+
+        sid = 'cmJrYlRualdPQ2dFd0dBaXFrbUlvdz09';
+        unCryptedSid = '1511643073';
+        pid = 'UWhrZG1vUWhHbndGV3ljcXFidnBGUT09';
+        lid = 'TGxwZUt3bGNpNWt3ZTJOdlZGcjlhZz09';
+
+    } else if (path.includes('radiesse')) {
+
+        sid = 'TUp0TTNid3poeWR0cmRpeEVVRE43UT09';
+        unCryptedSid = '1511643103';
+        pid = 'UWhrZG1vUWhHbndGV3ljcXFidnBGUT09';
+        lid = 'TGxwZUt3bGNpNWt3ZTJOdlZGcjlhZz09';
+
+    } else if (path.includes('botox')) {
+
+        sid = 'eFl3R01JVTV2UDIrdGU1Nm9VS2Q4UT09';
+        unCryptedSid = '1511643101';
+        pid = 'UWhrZG1vUWhHbndGV3ljcXFidnBGUT09';
+        lid = 'TGxwZUt3bGNpNWt3ZTJOdlZGcjlhZz09';
+
+    } else {
+
+        return;
+
+    }
 
     // Build OptiMantra URL
     const bookingUrl =
         'https://www.optimantra.com/optimus/patient/patientaccess/practsNslotsNEW'
-        + '?sid=' + encodeURIComponent('bHFYVFI0MTR6elQyS0VidU1jcGxHZz09')
-        + '&pid=' + encodeURIComponent('VWVvNEFOMlZpRFpKSUVnRDhzT2N3UT09')
-        + '&lid=' + encodeURIComponent('RnNvSVQ3YXVEOVlkZndOc25xanBCQT09')
+        + '?sid=' + encodeURIComponent(sid)
+        + '&unCryptedSid=' + encodeURIComponent(unCryptedSid)
+        + '&pid=' + encodeURIComponent(pid)
+        + '&lid=' + encodeURIComponent(lid)
         + '&first=' + encodeURIComponent(firstName)
         + '&last=' + encodeURIComponent(lastName)
         + '&email=' + encodeURIComponent(email)
-         + '&ph=' + encodeURIComponent(phone)
+        + '&ph=' + encodeURIComponent(phone)
         + '&addOnSids='
         + '&additionalReqParamJson='
         + '&address='
@@ -295,9 +378,10 @@ document.addEventListener('wpcf7submit', function (event) {
         + '&srcid='
         + '&state='
         + '&uid='
-        + '&zip=';
+        + '&zip='
+        + '&clienttzoffset=-330';
 
-    // Redirect to OptiMantra
+    // Redirect to the appropriate OptiMantra booking page
     window.location.href = bookingUrl;
 
 });

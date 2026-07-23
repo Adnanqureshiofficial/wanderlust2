@@ -1,4 +1,4 @@
-\<!-- template-parts/bs-final-cta.php -->
+<!-- template-parts/bs-final-cta.php -->
 <section class="final-cta section" id="CTAForm">
     <div class="container">
 

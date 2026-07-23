@@ -11,7 +11,7 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="footer-logo">
 
                     <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/bs_assets/bs-logo.svg"
+                        src="<?php echo get_template_directory_uri(); ?>/images/bs_assets/bs-logo.svg"
                         alt="<?php bloginfo('name'); ?>"
                     >
 
@@ -39,11 +39,11 @@
 
                 <ul>
 
-                    <li><a href="/botox">Botox</a></li>
+                    <li><a href="/botox-bs">Botox</a></li>
 
-                    <li><a href="/lip-filler">Lip Filler</a></li>
+                    <li><a href="/lip-filler-bs">Lip Filler</a></li>
 
-                    <li><a href="/radiesse-treatment">Radiesse</a></li>
+                    <li><a href="/radiesse-treatment-bs">Radiesse</a></li>
 
                 </ul>
 
@@ -117,8 +117,11 @@
                 <a href="https://wanderlustesthetic.com/terms-of-service/">Terms of Service</a>
 
             </div>
-
+ <div>
+            <p>Developed By Blare Studio AI</p>
         </div>
+        </div>
+       
 
     </div>
 

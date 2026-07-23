@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Lip Filler Landing Page By BS
+Template Name: Lip Filler Landing Page
 */
 get_header('landing');
 
@@ -100,7 +100,7 @@ $lip_filler_why_args = [
 $lip_filler_social_args = [
 
   'video_url' => get_template_directory_uri() .
-        '/images/bs_assets/LIP_FILLER_INSYTA.mp4',
+        '/assets/images/LIP_FILLER_INSYTA.mp4',
 
     'section_tag'   => 'SOCIAL PROOF',
 
@@ -176,22 +176,22 @@ $lip_filler_compare_args = [
     'gallery_images' => [
 
         [
-            'url' => get_template_directory_uri().'/images/bs_assets/B_ALip/3.png',
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/3.png',
             'alt' => 'Lip Filler Result 1'
         ],
 
         [
-            'url' => get_template_directory_uri().'/images/bs_assets/B_ALip/4.png',
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/4.png',
             'alt' => 'Lip Filler Result 2'
         ],
 
         [
-            'url' => get_template_directory_uri().'/images/bs_assets/B_ALip/5.png',
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/5.png',
             'alt' => 'Lip Filler Result 3'
         ],
 
         [
-            'url' => get_template_directory_uri().'/images/bs_assets/B_ALip/6.png',
+            'url' => get_template_directory_uri().'/assets/images/B_ALip/6.png',
             'alt' => 'Lip Filler Result 4'
         ],
 
@@ -258,7 +258,7 @@ $lip_filler_cta_args = [
     'section_description' => 'Plus physician-led lip mapping with your treatment.',
     
     // Developer Property: Keep the CF7 shortcode string flexible per landing page
-    'form_shortcode'      => '[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
+    'form_shortcode'      => '[contact-form-7 id="7d8ba4f" title="CTA Landing Page"]'
 ];
 ?>
 
