@@ -278,6 +278,30 @@ document.querySelectorAll('.social-video').forEach(container => {
  * Fires only after successful form submission.
  */
 
+
+// Dynamically Passing Service Name value to the CF7 form's service name hidden input
+document.addEventListener('DOMContentLoaded', function () {
+
+    const path = window.location.pathname.toLowerCase();
+    const field = document.getElementById('service_name');
+
+    if (!field) {
+        return;
+    }
+
+    if (path.includes('lip-filler')) {
+        field.value = 'Lip Filler Treatment';
+    } else if (path.includes('radiesse')) {
+        field.value = 'Radiesse';
+    } else if (path.includes('botox')) {
+        field.value = 'Botox';
+    } else if (path.includes('hair')) {
+        field.value = 'Laser Hair Removal';
+    }
+
+});
+
+
 function formatOptiMantraPhone(phone) {
 
     // Remove everything except digits

@@ -6,9 +6,9 @@ if ( empty( $args ) ) {
  <?php if ( ! empty( $args['offer_headline'] ) ) : ?>
 
             <div class="hero-banner-headline">
-
+        <a href="#CTAForm">
                 <?php echo esc_html( $args['offer_headline'] ); ?>
-
+</a>
             </div>
 
         <?php endif; ?>

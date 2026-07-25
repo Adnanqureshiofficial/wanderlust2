@@ -3023,6 +3023,7 @@ color:white;
   .result-slide img{
 
         max-height:50vh;
+        object-fit:cover;
 
     }
 
