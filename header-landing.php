@@ -43,6 +43,8 @@
     fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
+
+    <!-- msgsndr analytics -->
      <script 
   src="https://link.msgsndr.com/js/external-tracking.js"
   data-tracking-id="tk_5b1d02b0a2e74264a61cebb282946a32">
@@ -130,6 +132,7 @@
             <li><a href="/botox-bs">Botox</a></li>
 
             <li><a href="/radiesse-treatment-bs">Radiesse</a></li>
+            <li><a href="/laser-hair-removal-bs">Laser Hair Removal</a></li>
 
         </ul>
 

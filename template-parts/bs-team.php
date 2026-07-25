@@ -77,11 +77,11 @@
                             <?php endif; ?>
 
 
-                            <?php if (!empty($member['designation'])) : ?>
+                            <?php if (!empty($member['bio'])) : ?>
 
                                 <p>
 
-                                    <?php echo esc_html($member['designation']); ?>
+                                    <?php echo esc_html($member['bio']); ?>
 
                                 </p>
 

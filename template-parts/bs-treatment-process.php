@@ -67,18 +67,38 @@ if (empty($args)) {
 
                 <?php if (! empty($args['illustration_video'])) : ?>
 
-                    <video
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                        preload="metadata">
 
-                        <source
-                            src="<?php echo esc_url($args['illustration_video']); ?>"
-                            type="video/mp4">
 
-                    </video>
+<div class="social-video">
+
+    <video
+        class="testimonial-video"
+        preload="metadata"
+        playsinline
+        muted
+        autoplay
+        loop
+        poster="<?php echo esc_url( $args['poster_image'] ?? '' ); ?>">
+
+        <source
+            src="<?php echo esc_url( $args['illustration_video'] ); ?>"
+            type="video/mp4">
+
+        Your browser does not support the video tag.
+
+    </video>
+
+    <button
+        class="video-sound-toggle"
+        type="button"
+        aria-label="Toggle Sound">
+
+        🔇
+
+    </button>
+
+</div>
+
 
                 <?php elseif (! empty($args['illustration_image'])) : ?>
 

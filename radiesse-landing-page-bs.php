@@ -5,6 +5,39 @@ Template Name: Radiesse Landing Page by BS
 
 get_header('landing');
 
+
+/*-------------------
+Pop Up Form
+--------------------*/
+
+
+$radiesse_popup_args = [
+
+    'section_tag' => 'LIMITED TIME OFFER',
+
+    'popup_title' => 'Radiesse special offer for $399?',
+
+    'popup_description' =>
+        'Claim your complimentary consultation and receive a personalized Radiesse treatment plan from our medical professionals.',
+
+     'form_shortcode'=>'[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
+
+];
+
+/*-------------------
+Hero Banner
+--------------------*/
+$radiesse_banner_args = [
+
+    'offer_headline' => 'Radiesse special offer for $399',
+
+    'image' => get_template_directory_uri() . '/images/bs_assets/Banner_Header/Radiesse_Treatment.jpg',
+
+    'image_alt' => 'Laser Hair Removal Treatment'
+
+];
+
+
 /*=========================================================
 = HERO
 =========================================================*/
@@ -16,7 +49,7 @@ $radiesse_hero_args = [
     'heading' => 'Lift. Restore.<br><em>Rejuvenate.</em> Naturally.',
 
     'description' =>
-        'Rediscover firmer, smoother, more youthful-looking skin with physician-led Radiesse treatments that restore lost volume and stimulate your body\'s natural collagen production.',
+    'Rediscover firmer, smoother, more youthful-looking skin with physician-led Radiesse treatments that restore lost volume and stimulate your body\'s natural collagen production.',
 
     // No secondary supporting paragraph for Radiesse
     'support_text' => '',
@@ -78,7 +111,7 @@ $radiesse_why_args = [
     'section_title' => "Aging isn't just about wrinkles.",
 
     'section_description' =>
-        'Over time, your skin loses collagen, elasticity, and support. Radiesse doesn\'t simply fill what\'s missing. It helps your body rebuild what time has taken away, creating natural volume and firmer skin that continues improving over time.',
+    'Over time, your skin loses collagen, elasticity, and support. Radiesse doesn\'t simply fill what\'s missing. It helps your body rebuild what time has taken away, creating natural volume and firmer skin that continues improving over time.',
 
     'cards' => [
 
@@ -89,7 +122,7 @@ $radiesse_why_args = [
             'title' => 'Immediate Lift',
 
             'description' =>
-                'Restore lost facial volume the moment treatment is complete.'
+            'Restore lost facial volume the moment treatment is complete.'
 
         ],
 
@@ -100,7 +133,7 @@ $radiesse_why_args = [
             'title' => 'Stimulates Your Own Collagen',
 
             'description' =>
-                'Radiesse continues working beneath the skin long after your appointment, encouraging your body to produce natural collagen.'
+            'Radiesse continues working beneath the skin long after your appointment, encouraging your body to produce natural collagen.'
 
         ],
 
@@ -111,7 +144,7 @@ $radiesse_why_args = [
             'title' => 'Physician-Led Precision',
 
             'description' =>
-                'Every treatment is carefully customized to restore balance, structure, and youthful contours while maintaining a natural appearance.'
+            'Every treatment is carefully customized to restore balance, structure, and youthful contours while maintaining a natural appearance.'
 
         ]
 
@@ -124,6 +157,7 @@ $radiesse_why_args = [
 =========================================================*/
 
 $radiesse_trust_args = [
+    'chat_background' => get_template_directory_uri() . '/images/bs_assets/hair_trust_us.jpg',
 
     'columns' => [
 
@@ -192,7 +226,7 @@ $radiesse_before_after_args = [
     'section_title' => 'Subtle Changes. Beautiful Difference.',
 
     'section_description' =>
-        'Restore youthful contours, improve skin firmness, and enhance facial structure with results that continue improving over time.',
+    'Restore youthful contours, improve skin firmness, and enhance facial structure with results that continue improving over time.',
 
     'gallery_images' => [
 
@@ -235,7 +269,7 @@ $radiesse_education_args = [
     'section_title' => 'Radiesse is more than a filler.',
 
     'description' =>
-        'Unlike traditional fillers that simply add volume, Radiesse works as a collagen biostimulator, helping your body naturally rebuild support beneath the skin. That means immediate improvement today and continued rejuvenation in the months ahead.',
+    'Unlike traditional fillers that simply add volume, Radiesse works as a collagen biostimulator, helping your body naturally rebuild support beneath the skin. That means immediate improvement today and continued rejuvenation in the months ahead.',
 
     'points' => [
 
@@ -250,11 +284,11 @@ $radiesse_education_args = [
     ],
 
     'image_url' =>
-        get_template_directory_uri() .
+    get_template_directory_uri() .
         '/images/bs_assets/B_ARadiesse/How_Radiesse_Work.jpg',
 
     'image_alt' =>
-        'Radiesse Treatment'
+    'Radiesse Treatment'
 
 ];
 
@@ -270,7 +304,7 @@ $radiesse_treatment_areas_args = [
     'section_title' => 'Where Radiesse Works Best',
 
     'section_description' =>
-        'Restore lost volume and improve facial structure in the areas where aging is most noticeable.',
+    'Restore lost volume and improve facial structure in the areas where aging is most noticeable.',
 
     'areas' => [
 
@@ -289,11 +323,11 @@ $radiesse_treatment_areas_args = [
     ],
 
     'image_url' =>
-        get_template_directory_uri() .
+    get_template_directory_uri() .
         '/images/bs_assets/radiesse-treatment-areas.webp',
 
     'image_alt' =>
-        'Radiesse Treatment Areas'
+    'Radiesse Treatment Areas'
 
 ];
 
@@ -332,7 +366,7 @@ $radiesse_pain_points_args = [
 = SOCIAL PROOF
 =========================================================*/
 
-    $radiesse_social_proof_args = [
+$radiesse_social_proof_args = [
 
     'section_tag'   => 'PATIENT STORY',
 
@@ -343,7 +377,7 @@ $radiesse_pain_points_args = [
 
     'image_alt' => 'Radiesse patient testimonial',
 
-   'content' => "As a busy mom. I wanted to invest in myself without looking like I'd had work done. Radiesse gave me a refreshed appearance while keeping everything natural. My skin feels firmer, and I love seeing the gradual improvement. It was worth every penny.",
+    'content' => "As a busy mom. I wanted to invest in myself without looking like I'd had work done. Radiesse gave me a refreshed appearance while keeping everything natural. My skin feels firmer, and I love seeing the gradual improvement. It was worth every penny.",
 
     'cta_text' => 'BOOK MY CONSULTATION',
 
@@ -362,7 +396,7 @@ $radiesse_results_timeline_args = [
     'section_title' => 'What to expect after treatment',
 
     'section_description' =>
-        'Know what happens after your Radiesse treatment and how your results continue to improve over time.',
+    'Know what happens after your Radiesse treatment and how your results continue to improve over time.',
 
     'timeline_items' => [
 
@@ -373,7 +407,7 @@ $radiesse_results_timeline_args = [
             'title' => 'Instant Volume',
 
             'description' =>
-                'Enjoy immediate improvement in facial volume and contour.',
+            'Enjoy immediate improvement in facial volume and contour.',
 
             'icon' => '✓'
 
@@ -386,7 +420,7 @@ $radiesse_results_timeline_args = [
             'title' => 'Collagen Production Begins',
 
             'description' =>
-                'Your body naturally begins producing new collagen beneath the skin.',
+            'Your body naturally begins producing new collagen beneath the skin.',
 
             'icon' => '✓'
 
@@ -399,7 +433,7 @@ $radiesse_results_timeline_args = [
             'title' => 'Continued Rejuvenation',
 
             'description' =>
-                'Skin becomes firmer, smoother and naturally refreshed as collagen develops.',
+            'Skin becomes firmer, smoother and naturally refreshed as collagen develops.',
 
             'icon' => '✓'
 
@@ -412,7 +446,7 @@ $radiesse_results_timeline_args = [
             'title' => 'Long-Lasting Results',
 
             'description' =>
-                'Enjoy long-lasting rejuvenation with continued collagen support.',
+            'Enjoy long-lasting rejuvenation with continued collagen support.',
 
             'icon' => '✓'
 
@@ -434,14 +468,14 @@ $radiesse_pricing_offer_args = [
     'section_title' => 'Save $150 Today.',
 
     'section_description' =>
-        'Limited promotional appointments available. Reserve your physician-led consultation before this offer ends.',
+    'Limited promotional appointments available. Reserve your physician-led consultation before this offer ends.',
 
     'regular_price' => '$750',
 
     'offer_price' => '$599',
 
     'offer_note' =>
-        'Luxury results. Limited availability.',
+    'Luxury results. Limited availability.',
 
     'cta_text' => 'CLAIM MY $599 OFFER',
 
@@ -522,60 +556,60 @@ $radiesse_faq_args = [
         [
 
             'question' =>
-                'What makes Radiesse different from traditional fillers?',
+            'What makes Radiesse different from traditional fillers?',
 
             'answer' =>
-                'Radiesse not only restores lost volume but also stimulates your body\'s natural collagen production for longer-lasting rejuvenation.'
+            'Radiesse not only restores lost volume but also stimulates your body\'s natural collagen production for longer-lasting rejuvenation.'
 
         ],
 
         [
 
             'question' =>
-                'How long do results last?',
+            'How long do results last?',
 
             'answer' =>
-                'Many patients enjoy results lasting up to 18 months depending on the treatment area and individual response.'
+            'Many patients enjoy results lasting up to 18 months depending on the treatment area and individual response.'
 
         ],
 
         [
 
             'question' =>
-                'Is there downtime?',
+            'Is there downtime?',
 
             'answer' =>
-                'Most patients return to normal activities the same day with only mild swelling or bruising.'
+            'Most patients return to normal activities the same day with only mild swelling or bruising.'
 
         ],
 
         [
 
             'question' =>
-                'Who performs the treatment?',
+            'Who performs the treatment?',
 
             'answer' =>
-                'Every Radiesse treatment is performed by a licensed physician.'
+            'Every Radiesse treatment is performed by a licensed physician.'
 
         ],
 
         [
 
             'question' =>
-                'When will I see results?',
+            'When will I see results?',
 
             'answer' =>
-                'You will notice immediate improvement after treatment with continued collagen production enhancing results over the following months.'
+            'You will notice immediate improvement after treatment with continued collagen production enhancing results over the following months.'
 
         ],
 
         [
 
             'question' =>
-                'Does Radiesse look natural?',
+            'Does Radiesse look natural?',
 
             'answer' =>
-                'Yes. Our philosophy focuses on restoring youthful structure while preserving your natural facial appearance.'
+            'Yes. Our philosophy focuses on restoring youthful structure while preserving your natural facial appearance.'
 
         ]
 
@@ -588,16 +622,90 @@ $radiesse_urgency_args  = [
     'section_tag'         => 'URGENT UPDATE',
     'section_title'       => 'Limited Time Radiesse Treatment Offer',
     'section_description' => 'Only <strong>7 Consultations</strong> left this month.',
-    
+
     // Developer Property: Pass an ISO Date String for your JS clock parsing engine
-    'countdown_date'      => '2026-12-31T23:59:59', 
-    
+    'countdown_date'      => '2026-12-31T23:59:59',
+
     'label_days'          => 'DAYS',
     'label_hours'         => 'HOURS',
     'label_minutes'       => 'MINUTES',
     'label_seconds'       => 'SECONDS',
     'cta_text'            => 'CLAIM MY VOUCHER NOW',
     'cta_url'             => '#CTAForm'
+];
+
+$team_args = [
+
+    'section_tag' => 'OUR TEAM',
+
+    'section_title' => 'Meet the Aesthetic Experts',
+
+    'section_description' =>
+        'Our team brings together experienced specialists from aesthetics, skin health, and advanced beauty services, all focused on providing safe, effective, and highly personalized treatments in a relaxed environment.',
+
+    'members' => [
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Dr. Gulrez Sayed.jpg',
+
+            'name'  => 'Dr. Gulrez Sayed',
+            
+            'bio' => 'Board-certified Family Medicine physician with over 18 years of experience, dedicated to providing compassionate, patient centered care focused on lifelong health and wellness.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Tahmina Ahmad.jpg',
+
+            'name'  => 'Tahmina Ahmad',
+
+            'bio' => 'Board-certified Family medicine physician with over six years of experience, providing whole person care through a personalized approach rooted in osteopathic medicine and wellness.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Katie Haines.jpg',
+
+            'name'  => 'Katie Haines',
+
+            'bio' => 'Aesthetic Nurse Practitioner with 22 years of nursing experience, delivering safe, evidence based care focused on aesthetics, wellness, and healthy aging.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Bilgi McKenzie.jpg',
+
+            'name'  => 'Bilgi McKenzie',
+
+            'bio' => 'Registered Nurse and aesthetic injector with nearly a decade of clinical experience, dedicated to delivering safe, natural looking results that inspire confidence.'
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Abigail Winland.jpg',
+
+            'name'  => 'Abigail Winland',
+
+            'bio' => 'Registered Nurse injector with a background in pediatric intensive care, specializing in neurotoxins and dermal fillers for natural, personalized results.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Sheila Parker.jpg',
+
+            'name'  => 'Sheila Parker',
+
+            'bio' => 'Registered Nurse with a background in Labor & Delivery and NICU, blending clinical expertise with aesthetic artistry to enhance natural beauty and confidence.'
+
+        ]
+
+    ]
+
 ];
 
 
@@ -613,9 +721,11 @@ $radiesse_final_cta_args = [
     'section_title' => 'Luxury Results. Limited-Time Pricing.',
 
     'section_description' =>
-        'Experience the collagen-stimulating treatment trusted for natural-looking rejuvenation while enjoying $150 in savings. Appointments are limited.',
+    'Experience the collagen-stimulating treatment trusted for natural-looking rejuvenation while enjoying $150 in savings. Appointments are limited.',
 
-     'form_shortcode' => '[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
+    'service_name' => 'Radiesse Treatment',
+
+    'form_shortcode' => '[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
 
 ];
 
@@ -623,88 +733,42 @@ $radiesse_final_cta_args = [
 
 <?php
 
-get_template_part(
-    'template-parts/bs-hero',
-    null,
-    $radiesse_hero_args
+
+get_template_part('template-parts/bs-hero-banner', null, $radiesse_banner_args);
+get_template_part('template-parts/bs-popup-form', null, $radiesse_popup_args);
+
+get_template_part('template-parts/bs-hero', null, $radiesse_hero_args);
+
+get_template_part('template-parts/bs-why-mobile', null, $radiesse_why_args
 );
 
-get_template_part(
-    'template-parts/bs-why-mobile',
-    null,
-    $radiesse_why_args
-);
+get_template_part('template-parts/bs-social-proof', null, $radiesse_social_proof_args);
 
-get_template_part(
-    'template-parts/bs-social-proof',
-    null,
-    $radiesse_social_proof_args
-);
-
-get_template_part(
-    'template-parts/bs-pain-points',
-    null,
-    $radiesse_pain_points_args
+get_template_part('template-parts/bs-pain-points', null, $radiesse_pain_points_args
 );
 
 
-get_template_part(
-    'template-parts/bs-trust',
-    null,
-    $radiesse_trust_args
-);
+get_template_part('template-parts/bs-trust', null, $radiesse_trust_args);
 
-get_template_part(
-    'template-parts/bs-before-after',
-    null,
-    $radiesse_before_after_args
-);
+get_template_part('template-parts/bs-before-after', null, $radiesse_before_after_args);
 
-get_template_part( 'template-parts/bs-urgency', null, $radiesse_urgency_args ); 
+get_template_part('template-parts/bs-urgency', null, $radiesse_urgency_args);
 
-get_template_part(
-    'template-parts/bs-education',
-    null,
-    $radiesse_education_args
-);
+get_template_part('template-parts/bs-education', null, $radiesse_education_args);
 
-get_template_part(
-    'template-parts/bs-treatment-areas',
-    null,
-    $radiesse_treatment_areas_args
-);
+get_template_part('template-parts/bs-treatment-areas',null,$radiesse_treatment_areas_args);
 
 
-get_template_part(
-    'template-parts/bs-results-timeline',
-    null,
-    $radiesse_results_timeline_args
-);
+get_template_part('template-parts/bs-results-timeline', null,$radiesse_results_timeline_args);
 
-get_template_part(
-    'template-parts/bs-pricing-offer',
-    null,
-    $radiesse_pricing_offer_args
-);
+get_template_part('template-parts/bs-pricing-offer',null, $radiesse_pricing_offer_args);
 
 
-get_template_part(
-    'template-parts/bs-comparison-table',
-    null,
-    $radiesse_comparison_args
-);
+get_template_part( 'template-parts/bs-comparison-table', null, $radiesse_comparison_args);
+get_template_part('template-parts/bs-team', null, $team_args);
+get_template_part('template-parts/bs-faq',null,$radiesse_faq_args);
 
-get_template_part(
-    'template-parts/bs-faq',
-    null,
-    $radiesse_faq_args
-);
-
-get_template_part(
-    'template-parts/bs-final-cta',
-    null,
-    $radiesse_final_cta_args
-);
+get_template_part('template-parts/bs-final-cta',null,$radiesse_final_cta_args);
 
 get_footer('landing');
 ?>

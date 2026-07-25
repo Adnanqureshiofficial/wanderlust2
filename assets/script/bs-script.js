@@ -113,22 +113,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!popup) return;
 
-    // Don't show again during this browser session
-    if (sessionStorage.getItem('bsPopupClosed')) {
-        return;
-    }
+    
 
     setTimeout(function () {
 
         popup.classList.add('active');
 
-    }, 5000);
+    }, 3000);
 
     popup.querySelector('.bs-popup-close').addEventListener('click', function () {
 
         popup.classList.remove('active');
 
-        sessionStorage.setItem('bsPopupClosed', 'true');
+       
 
     });
 
@@ -138,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             popup.classList.remove('active');
 
-            sessionStorage.setItem('bsPopupClosed', 'true');
+           
 
         }
 
@@ -346,6 +343,13 @@ document.addEventListener('wpcf7submit', function (event) {
         unCryptedSid = '1511643101';
         pid = 'UWhrZG1vUWhHbndGV3ljcXFidnBGUT09';
         lid = 'TGxwZUt3bGNpNWt3ZTJOdlZGcjlhZz09';
+
+    } else if (path.includes('hair')) {
+
+    sid = 'M1JBYkNJRDhGbVRXcTZ5KzgzTWwvdz09';
+    unCryptedSid = '1511643132';
+    pid = 'UWhrZG1vUWhHbndGV3ljcXFidnBGUT09';
+    lid = 'TGxwZUt3bGNpNWt3ZTJOdlZGcjlhZz09';
 
     } else {
 

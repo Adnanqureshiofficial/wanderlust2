@@ -6,7 +6,7 @@
 
             <?php if ( $index === 0 ) : ?>
 
-                <div class="trust-chat-card"  style="background-image: url('<?php echo esc_url( $args['chat_background'] ); ?>');">
+                <div class="trust-chat-card"  style="background-image: url('<?php echo esc_url( $args["chat_background"] )?>')">
 
                     <div class="trust-chat-overlay">
 

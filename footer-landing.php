@@ -44,6 +44,7 @@
                     <li><a href="/lip-filler-bs">Lip Filler</a></li>
 
                     <li><a href="/radiesse-treatment-bs">Radiesse</a></li>
+                    <li><a href="/laser-hair-removal-bs">Laser Hair Removal</a></li>
 
                 </ul>
 
@@ -118,7 +119,7 @@
 
             </div>
  <div>
-            <p>Developed By Blare Studio AI</p>
+            <p>Developed & Marketed By Blare Studio AI</p>
         </div>
         </div>
        

@@ -5,6 +5,41 @@
 
 get_header('landing');
 
+
+
+
+/*-------------------
+Pop Up Form
+--------------------*/
+
+
+$botox_popup_args = [
+
+    'section_tag' => 'LIMITED TIME OFFER',
+
+    'popup_title' => 'Botox special offer starts at $7/unit. Get Now!',
+
+    'popup_description' =>
+        'Claim your complimentary consultation and receive a personalized Botox treatment plan from our medical professionals.',
+
+     'form_shortcode'=>'[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
+
+];
+
+/*-------------------
+Hero Banner
+--------------------*/
+$botox_banner_args = [
+
+    'offer_headline' => 'Botox special offer starts at $7/unit. Get Now!',
+
+    'image' => get_template_directory_uri() . '/images/bs_assets/Banner_Header/Botox_Header_Image.jpg',
+
+    'image_alt' => 'Laser Hair Removal Treatment'
+
+];
+
+
 /* ======================================================
    HERO
 ====================================================== */
@@ -179,7 +214,8 @@ $botox_social_proof_args = [
 ====================================================== */
 
 $botox_trust_args = [
-
+ 'chat_background' => get_template_directory_uri() . '/images/bs_assets/hair_trust_us.jpg',
+    
     'columns' => [
 
         [
@@ -485,6 +521,81 @@ $botox_faq_args = [
 
 ];
 
+$team_args = [
+
+    'section_tag' => 'OUR TEAM',
+
+    'section_title' => 'Meet the Aesthetic Experts',
+
+    'section_description' =>
+        'Our team brings together experienced specialists from aesthetics, skin health, and advanced beauty services, all focused on providing safe, effective, and highly personalized treatments in a relaxed environment.',
+
+    'members' => [
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Dr. Gulrez Sayed.jpg',
+
+            'name'  => 'Dr. Gulrez Sayed',
+            
+            'bio' => 'Board-certified Family Medicine physician with over 18 years of experience, dedicated to providing compassionate, patient centered care focused on lifelong health and wellness.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Tahmina Ahmad.jpg',
+
+            'name'  => 'Tahmina Ahmad',
+
+            'bio' => 'Board-certified Family medicine physician with over six years of experience, providing whole person care through a personalized approach rooted in osteopathic medicine and wellness.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Katie Haines.jpg',
+
+            'name'  => 'Katie Haines',
+
+            'bio' => 'Aesthetic Nurse Practitioner with 22 years of nursing experience, delivering safe, evidence based care focused on aesthetics, wellness, and healthy aging.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Bilgi McKenzie.jpg',
+
+            'name'  => 'Bilgi McKenzie',
+
+            'bio' => 'Registered Nurse and aesthetic injector with nearly a decade of clinical experience, dedicated to delivering safe, natural looking results that inspire confidence.'
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Abigail Winland.jpg',
+
+            'name'  => 'Abigail Winland',
+
+            'bio' => 'Registered Nurse injector with a background in pediatric intensive care, specializing in neurotoxins and dermal fillers for natural, personalized results.'
+
+        ],
+
+        [
+
+            'image' => get_template_directory_uri() . '/images/bs_assets/team/Sheila Parker.jpg',
+
+            'name'  => 'Sheila Parker',
+
+            'bio' => 'Registered Nurse with a background in Labor & Delivery and NICU, blending clinical expertise with aesthetic artistry to enhance natural beauty and confidence.'
+
+        ]
+
+    ]
+
+];
+
+
 
 /* ======================================================
    FINAL CTA
@@ -501,12 +612,16 @@ $botox_final_cta_args = [
         'Once this promotion ends, Botox returns to its regular price of $14 per unit. Reserve your consultation today.',
 
     'form_shortcode' =>
-        '[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
+        '[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]',
+         'service_name' => 'Botox',
 
 ];
 
 ?>
 
+
+<?php get_template_part('template-parts/bs-hero-banner', null, $botox_banner_args); ?>
+<?php get_template_part('template-parts/bs-popup-form', null, $botox_popup_args); ?>
 
 <?php get_template_part('template-parts/bs-hero', null, $botox_hero_args); ?>
 
@@ -527,6 +642,7 @@ $botox_final_cta_args = [
 <?php get_template_part('template-parts/bs-pricing-offer', null, $botox_pricing_offer_args); ?>
 
 <?php get_template_part('template-parts/bs-results-timeline', null, $botox_results_timeline_args); ?>
+<?php get_template_part('template-parts/bs-team', null, $team_args); ?>
 
 <?php get_template_part('template-parts/bs-faq', null, $botox_faq_args); ?>
 

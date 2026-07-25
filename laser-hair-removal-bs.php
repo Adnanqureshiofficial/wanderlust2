@@ -31,14 +31,13 @@ Hero Banner
 --------------------*/
 $laser_banner_args = [
 
-    'offer_headline' => 'Free Consultation + Personalized Treatment Plan',
+    'offer_headline' => 'Laser hair removal special offer 20% off',
 
-    'image' => get_template_directory_uri() . '/images/bs_assets/LASER_HAIR_REMOVAL._BANNER.jpg',
+    'image' => get_template_directory_uri() . '/images/bs_assets/Banner_Header/LASER_HAIR_REMOVAL._BANNER.jpg',
 
     'image_alt' => 'Laser Hair Removal Treatment'
 
 ];
-
 
 
 /* ======================================================
@@ -62,7 +61,17 @@ $laser_hero_args = [
     'card' => [
         'title' => 'Limited Time Consultation',
         'subtitle' => 'Book your personalized treatment plan.',
-        'pricing' => [],
+        'pricing' => [
+
+         [
+
+                'label' => 'Laser Hair Removal',
+
+                'price' => '20% OFF',
+
+
+            ]
+        ],
         'features' => [
             'Permanent Hair Reduction',
             'Safe Treatment',
@@ -86,25 +95,25 @@ $laser_problem_args = [
     'cards' => [
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/hair_removal_icons/shaving.png',
             'title' => 'Constant Shaving',
             'description' => 'Hair grows back within days.'
         ],
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/hair_removal_icons/razorburn.png',
             'title' => 'Razor Burns',
             'description' => 'Redness, irritation, and sensitive skin after every shave.'
         ],
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/hair_removal_icons/ingrownshairs.png',
             'title' => 'Ingrown Hairs',
             'description' => 'Painful bumps that leave marks and discomfort.'
         ],
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/hair_removal_icons/waxing.png',
             'title' => 'Endless Waxing Costs',
             'description' => 'Monthly appointments that never actually solve the problem.'
         ]
@@ -201,7 +210,7 @@ Treatment Areas
 ---------------------------*/
 $areas_args = [
 
-    'variant' => 'compact',
+    
 
     'section_tag'         => 'TREATMENT AREAS',
 
@@ -212,22 +221,22 @@ $areas_args = [
     'columns' => [
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/treatment_areas/Face.jpg',
             'title' => 'Face',
         ],
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/treatment_areas/upper_lips.jpg',
             'title' => 'Upper Lip',
         ],
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/treatment_areas/chin.jpg',
             'title' => 'Chin',
         ],
 
         [
-            'icon' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
+            'icon' => get_template_directory_uri() . '/images/bs_assets/treatment_areas/neck.jpg',
             'title' => 'Neck',
         ],
 
@@ -342,7 +351,7 @@ $laser_treatment_process_args = [
 
     'illustration_image' => get_template_directory_uri() . '/images/bs_assets/Img_Placeholder.png',
 
-    // 'illustration_video' => get_template_directory_uri() . '/images/bs_assets/laser-hair-removal/process/laser-process.mp4',
+    'illustration_video' => get_template_directory_uri() . '/images/bs_assets/how_hair_removal_works.mp4',
 
     'bullet_points' => [
 
@@ -504,7 +513,9 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Dr. Gulrez Sayed.jpg',
 
-            'name'  => 'Dr. Gulrez Sayed'
+            'name'  => 'Dr. Gulrez Sayed',
+            
+            'bio' => 'Board-certified Family Medicine physician with over 18 years of experience, dedicated to providing compassionate, patient centered care focused on lifelong health and wellness.'
 
         ],
 
@@ -512,7 +523,9 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Tahmina Ahmad.jpg',
 
-            'name'  => 'Tahmina Ahmad'
+            'name'  => 'Tahmina Ahmad',
+
+            'bio' => 'Board-certified Family medicine physician with over six years of experience, providing whole person care through a personalized approach rooted in osteopathic medicine and wellness.'
 
         ],
 
@@ -520,7 +533,9 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Katie Haines.jpg',
 
-            'name'  => 'Katie Haines'
+            'name'  => 'Katie Haines',
+
+            'bio' => 'Aesthetic Nurse Practitioner with 22 years of nursing experience, delivering safe, evidence based care focused on aesthetics, wellness, and healthy aging.'
 
         ],
 
@@ -528,15 +543,18 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Bilgi McKenzie.jpg',
 
-            'name'  => 'Bilgi McKenzie'
+            'name'  => 'Bilgi McKenzie',
 
+            'bio' => 'Registered Nurse and aesthetic injector with nearly a decade of clinical experience, dedicated to delivering safe, natural looking results that inspire confidence.'
         ],
 
         [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Abigail Winland.jpg',
 
-            'name'  => 'Abigail Winland'
+            'name'  => 'Abigail Winland',
+
+            'bio' => 'Registered Nurse injector with a background in pediatric intensive care, specializing in neurotoxins and dermal fillers for natural, personalized results.'
 
         ],
 
@@ -544,12 +562,32 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Sheila Parker.jpg',
 
-            'name'  => 'Sheila Parker'
+            'name'  => 'Sheila Parker',
+
+            'bio' => 'Registered Nurse with a background in Labor & Delivery and NICU, blending clinical expertise with aesthetic artistry to enhance natural beauty and confidence.'
 
         ]
 
     ]
 
+];
+
+
+//Urgency Section
+$hair_removal_urgency_args  = [
+    'section_tag'         => 'URGENT UPDATE',
+    'section_title'       => 'Limited Time Radiesse Treatment Offer',
+    'section_description' => 'Only <strong>7 Consultations</strong> left this month.',
+
+    // Developer Property: Pass an ISO Date String for your JS clock parsing engine
+    'countdown_date'      => '2026-12-31T23:59:59',
+
+    'label_days'          => 'DAYS',
+    'label_hours'         => 'HOURS',
+    'label_minutes'       => 'MINUTES',
+    'label_seconds'       => 'SECONDS',
+    'cta_text'            => 'CLAIM MY VOUCHER NOW',
+    'cta_url'             => '#CTAForm'
 ];
 
 /* ======================================================
@@ -559,8 +597,10 @@ $laser_final_cta_args = [
     'section_tag'=>'READY?',
     'section_title'=>'Ready To Stop Shaving Forever?',
     'section_description'=>'Book your personalized laser hair removal treatment today and begin your journey toward long-lasting hair reduction.',
-    'form_shortcode'=>'[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]'
-];
+    'form_shortcode'=>'[contact-form-7 id="6f75418" title="BS Landing Page Contact Form"]',
+     'service_name' => 'Laser Hair Removal',
+
+    ];
 
 
 get_template_part('template-parts/bs-hero-banner', null, $laser_banner_args);
@@ -570,11 +610,13 @@ get_template_part('template-parts/bs-problem-section',null, $laser_problem_args)
 get_template_part('template-parts/bs-treatment-process', null, $laser_treatment_process_args);
 get_template_part('template-parts/bs-treatment-journey', null, $laser_treatment_journey_args);
 get_template_part('template-parts/bs-before-after', null,   $hair_removal_before_after_args); 
+get_template_part('template-parts/bs-urgency', null, $hair_removal_urgency_args);
 get_template_part('template-parts/bs-results-timeline', null, $laser_recovery_args);
 get_template_part('template-parts/bs-why-mobile', null, $laser_why_args);
 get_template_part('template-parts/bs-trust', null, $laser_benefits_args);
 
-get_template_part('template-parts/bs-icon-grid', null, $areas_args);
+
+get_template_part('template-parts/bs-areas-treated', null, $areas_args);
 get_template_part('template-parts/bs-team', null, $team_args);
 
 get_template_part('template-parts/bs-faq', null, $laser_faq_args);
