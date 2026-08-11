@@ -298,6 +298,9 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (path.includes('hair')) {
         field.value = 'Laser Hair Removal';
     }
+     else if (path.includes('weightloss')) {
+        field.value = 'Weight Loss Program';
+    }
 
 });
 

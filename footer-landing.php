@@ -45,6 +45,7 @@
 
                     <li><a href="/radiesse-treatment-bs">Radiesse</a></li>
                     <li><a href="/laser-hair-removal-bs">Laser Hair Removal</a></li>
+                     <li><a href="/weightloss-bs">Weight Loss Program</a></li>
 
                 </ul>
 

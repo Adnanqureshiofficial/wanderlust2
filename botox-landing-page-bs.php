@@ -536,7 +536,7 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Dr. Gulrez Sayed.jpg',
 
-            'name'  => 'Dr. Gulrez Sayed',
+            'name'  => 'Dr. Gulrez Syed',
             
             'bio' => 'Board-certified Family Medicine physician with over 18 years of experience, dedicated to providing compassionate, patient centered care focused on lifelong health and wellness.'
 

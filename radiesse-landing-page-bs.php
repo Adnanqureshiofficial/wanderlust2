@@ -15,7 +15,7 @@ $radiesse_popup_args = [
 
     'section_tag' => 'LIMITED TIME OFFER',
 
-    'popup_title' => 'Radiesse special offer for $399?',
+    'popup_title' => 'Radiesse special offer for $599?',
 
     'popup_description' =>
         'Claim your complimentary consultation and receive a personalized Radiesse treatment plan from our medical professionals.',
@@ -29,7 +29,7 @@ Hero Banner
 --------------------*/
 $radiesse_banner_args = [
 
-    'offer_headline' => 'Radiesse special offer for $399',
+    'offer_headline' => 'Radiesse special offer for $599',
 
     'image' => get_template_directory_uri() . '/images/bs_assets/Banner_Header/Radiesse_Treatment.jpg',
 
@@ -649,7 +649,7 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Dr. Gulrez Sayed.jpg',
 
-            'name'  => 'Dr. Gulrez Sayed',
+            'name'  => 'Dr. Gulrez Syed',
             
             'bio' => 'Board-certified Family Medicine physician with over 18 years of experience, dedicated to providing compassionate, patient centered care focused on lifelong health and wellness.'
 

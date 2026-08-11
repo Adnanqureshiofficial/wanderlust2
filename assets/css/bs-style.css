@@ -856,6 +856,41 @@ object-position:top;s
     font-weight:500;
 
 }
+/* Container for the service badges */
+.price-services {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+   
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+}
+
+/* Individual service badge styling */
+.price-services span {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 0.8125rem; /* ~13px for crisp legibility */
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 6px 12px;
+  border-radius: 20px; /* Fully rounded pill shape */
+  border: 1px solid #e2e8f0; /* Subtle border for definition on light backgrounds */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Soft depth */
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap; /* Prevents awkward mid-text line breaks */
+}
+
+/* Hover state for subtle interactivity */
+.price-services span:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
 
 
 
@@ -1083,8 +1118,18 @@ margin:auto;
 .hero .btn {
   margin-bottom: 30px;
 }
+ .price-row.price-services {
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .price-services span {
+    font-size: 0.75rem; /* ~12px */
+    padding: 5px 10px;
+  }
 
 }
+
 
 
 /* ------------------

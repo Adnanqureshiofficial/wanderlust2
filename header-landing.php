@@ -44,11 +44,56 @@
     </script>
     <!-- End Meta Pixel Code -->
 
-    <!-- msgsndr analytics -->
+    <!-- msgsndr analytics Go High Level Tracker  -->
      <script 
   src="https://link.msgsndr.com/js/external-tracking.js"
   data-tracking-id="tk_5b1d02b0a2e74264a61cebb282946a32">
 </script>
+
+
+<!-- Microsoft Clarity Tracking -->
+<?php if ( is_page_template( 'botox-landing-page-bs.php' ) ) : ?>
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xy3v9ni58t");
+</script>
+
+<?php elseif ( is_page_template( 'radiesse-landing-page-bs.php' ) ) : ?>
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xy4k6m80dv");
+</script>
+
+<?php elseif ( is_page_template( 'laser-hair-removal-bs.php' ) ) : ?>
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xy4kpkyitp");
+</script>
+
+<?php elseif ( is_page_template( 'lip_filler_landing_bs.php' ) ) : ?>
+
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xy4jloc0nx");
+</script>
+
+<?php endif; ?>
+
 
     <?php wp_head(); ?>
 
@@ -133,6 +178,7 @@
 
             <li><a href="/radiesse-treatment-bs">Radiesse</a></li>
             <li><a href="/laser-hair-removal-bs">Laser Hair Removal</a></li>
+            <li><a href="/weightloss-bs">Weight Loss Program</a></li>
 
         </ul>
 

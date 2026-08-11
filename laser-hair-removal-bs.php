@@ -31,7 +31,7 @@ Hero Banner
 --------------------*/
 $laser_banner_args = [
 
-    'offer_headline' => 'Laser hair removal special offer 20% off',
+    'offer_headline' => 'Laser hair removal special offer $350 Only',
 
     'image' => get_template_directory_uri() . '/images/bs_assets/Banner_Header/LASER_HAIR_REMOVAL._BANNER.jpg',
 
@@ -45,29 +45,36 @@ $laser_banner_args = [
 ====================================================== */
 
 $laser_hero_args = [
-    'badge_text' => 'PERSONALIZED TREATMENT PLAN',
+    'badge_text' => 'LIMITED TIME OFFER',
     'heading' => 'Stop Shaving.<br><em>Start Living Smooth.</em>',
     'description' => 'Permanent laser hair reduction that helps eliminate unwanted hair, razor bumps, and ingrown hairs with safe, physician-guided treatments.',
-    'support_text' => 'Safe for all skin types using advanced cooling technology.',
-    'main_cta_text' => 'REQUEST FREE CONSULTATION',
+    'support_text' => 'Only 20 slots available this week.',
+    'main_cta_text' => 'BOOK MY LASER HAIR REMOVAL',
     'main_cta_url' => '#CTAForm',
     'trust_bullets' => [
-        'Permanent Hair Reduction',
-        'Safe For All Skin Types',
-        'Zero Downtime',
-        'Medical Professionals',
-        'Advanced Cooling Technology'
+        ' LICENSED PROFESSIONALS',
+        'MEDICAL-GRADE FILLER',
+        'NATURAL RESULTS',
+        
     ],
     'card' => [
-        'title' => 'Limited Time Consultation',
-        'subtitle' => 'Book your personalized treatment plan.',
+        'title' => 'Limited Time Offer',
+        'subtitle' => 'Physician-led . Personalized . Minimal downtime',
         'pricing' => [
 
          [
 
-                'label' => 'Laser Hair Removal',
+                'label' => 'Choose any service for',
 
-                'price' => '20% OFF',
+                'price' => '$350',
+
+                'typesofservice' => [
+                'Half Face',
+                'Full legs + Feet',
+                'Full Back',
+                'Brazilian',
+                'Full Arms'
+            ]
 
 
             ]
@@ -78,7 +85,7 @@ $laser_hero_args = [
             'Advanced Cooling',
             'Medical Professionals'
         ],
-        'cta_text' => 'BOOK YOUR SESSION',
+        'cta_text' => 'CLAIM MY VOUCHER',
         'cta_url' => '#CTAForm'
     ]
 ];
@@ -513,7 +520,7 @@ $team_args = [
 
             'image' => get_template_directory_uri() . '/images/bs_assets/team/Dr. Gulrez Sayed.jpg',
 
-            'name'  => 'Dr. Gulrez Sayed',
+            'name'  => 'Dr. Gulrez Syed',
             
             'bio' => 'Board-certified Family Medicine physician with over 18 years of experience, dedicated to providing compassionate, patient centered care focused on lifelong health and wellness.'
 
