@@ -1118,6 +1118,7 @@ margin:auto;
 .hero .btn {
   margin-bottom: 30px;
 }
+
  .price-row.price-services {
     gap: 6px;
     margin-top: 10px;
@@ -1442,6 +1443,272 @@ justify-items:center;
     }
 
 }
+
+
+/* ===================================
+       ABP Location video container 
+=================================== */
+/* =========================================================
+   LOCATION VIDEO / LOCAL SEO SECTION
+   ========================================================= */
+
+.bs-location-video {
+    position: relative;
+    padding: 105px 0 115px;
+    background: var(--cream);
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.bs-location-video__header {
+    max-width: 900px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.bs-location-video__title {
+    margin: 0 0 18px;
+
+    font-family: var(--heading-font);
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 400;
+    line-height: 1.02;
+
+    color: var(--green);
+}
+
+.bs-location-video__subline {
+    max-width: 720px;
+    margin: 0 auto;
+
+    font-family: var(--body-font);
+    font-size: clamp(16px, 1.5vw, 19px);
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: var(--muted);
+}
+
+
+/* ---------------------------------------------------------
+   VIDEO FRAME
+   --------------------------------------------------------- */
+
+.bs-location-video__media {
+    position: relative;
+
+    width: min(100%, 1120px);
+    margin: 0 auto;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    background: #1c1c1a;
+}
+
+
+/* ---------------------------------------------------------
+   VIDEO
+   --------------------------------------------------------- */
+
+.bs-location-video__video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* Prevent accidental inline-video UI */
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ---------------------------------------------------------
+   SOUND BUTTON
+   --------------------------------------------------------- */
+
+.bs-location-video__sound {
+    position: absolute;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-width: 46px;
+    height: 46px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+
+    background: rgba(23, 20, 18, 0.58);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: #fff;
+
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.bs-location-video__sound:hover {
+    background: rgba(23, 20, 18, 0.78);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-2px);
+}
+
+.bs-location-video__sound:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 3px;
+}
+
+.bs_locations_subline {
+  color:var(--gold);
+}
+
+
+/* ---------------------------------------------------------
+   SOUND ICON
+   --------------------------------------------------------- */
+
+.bs-location-video__sound-icon {
+    display: inline-flex;
+
+    width: 18px;
+    height: 18px;
+}
+
+.bs-location-video__sound-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bs-location-video__sound-icon--on {
+    display: none;
+}
+
+.bs-location-video__sound.is-unmuted
+.bs-location-video__sound-icon--off {
+    display: none;
+}
+
+.bs-location-video__sound.is-unmuted
+.bs-location-video__sound-icon--on {
+    display: inline-flex;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 992px) {
+
+    .bs-location-video {
+        padding: 90px 0 95px;
+    }
+
+    .bs-location-video__header {
+        margin-bottom: 42px;
+    }
+
+    .bs-location-video__media {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .bs-location-video {
+        padding: 72px 0 78px;
+    }
+
+    .bs-location-video__header {
+        margin-bottom: 34px;
+    }
+
+    .bs-location-video__title {
+        font-size: clamp(38px, 8vw, 52px);
+        line-height: 1.05;
+    }
+
+    .bs-location-video__subline {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .bs-location-video__media {
+        border-radius: var(--radius-sm);
+    }
+
+    .bs-location-video__sound {
+        right: 14px;
+        bottom: 14px;
+
+        height: 42px;
+        min-width: 42px;
+
+        padding: 0 13px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .bs-location-video {
+        padding: 60px 0 65px;
+    }
+
+    .bs-location-video__header {
+        margin-bottom: 28px;
+    }
+
+    .bs-location-video__title {
+        font-size: 36px;
+    }
+
+    .bs-location-video__subline {
+        font-size: 15px;
+    }
+
+    .bs-location-video__sound-label {
+        display: none;
+    }
+
+    .bs-location-video__sound {
+        width: 42px;
+        padding: 0;
+    }
+}
+
+
+
+
+
 /* ===================================
         WHY MOBILE
 =================================== */

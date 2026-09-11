@@ -382,7 +382,7 @@ $lip_filler_cta_args = [
 
 
     <?php get_template_part('template-parts/bs-hero-banner', null, $lip_herobanner_args);  ?>
-<?php get_template_part('template-parts/bs-popup-form', null, $lipfiller_popup_args); ?>
+    <?php get_template_part('template-parts/bs-popup-form', null, $lipfiller_popup_args); ?>
     <?php get_template_part('template-parts/bs-hero', null, $lip_filler_hero_args); ?>
     <?php get_template_part('template-parts/bs-why-mobile', null, $lip_filler_why_args); ?>
     <?php get_template_part('template-parts/bs-social-proof', null, $lip_filler_social_args); ?>

@@ -283,27 +283,29 @@ document.querySelectorAll('.social-video').forEach(container => {
 document.addEventListener('DOMContentLoaded', function () {
 
     const path = window.location.pathname.toLowerCase();
-    const field = document.getElementById('service_name');
 
-    if (!field) {
-        return;
-    }
+    let service = '';
 
     if (path.includes('lip-filler')) {
-        field.value = 'Lip Filler Treatment';
+        service = 'Lip Filler Treatment';
     } else if (path.includes('radiesse')) {
-        field.value = 'Radiesse';
+        service = 'Radiesse';
     } else if (path.includes('botox')) {
-        field.value = 'Botox';
+        service = 'Botox';
     } else if (path.includes('hair')) {
-        field.value = 'Laser Hair Removal';
+        service = 'Laser Hair Removal';
+    } else if (path.includes('weightloss')) {
+        service = 'Weight Loss Program';
     }
-     else if (path.includes('weightloss')) {
-        field.value = 'Weight Loss Program';
-    }
+
+
+    if (!service) return;
+
+    document.querySelectorAll('input[name="bs_service_name"]').forEach(function(field) {
+        field.value = service;
+    });
 
 });
-
 
 function formatOptiMantraPhone(phone) {
 
@@ -340,8 +342,8 @@ document.addEventListener('wpcf7submit', function (event) {
     });
 
     // Retrieve submitted values
-    const firstName = formData['first-name'] || '';
-    const lastName  = formData['last-name'] || '';
+    const firstName = formData['first_name'] || '';
+    const lastName  = formData['last_name'] || '';
     const email     = formData['email'] || '';
     const phone     = formatOptiMantraPhone(formData['phone']) || '';
 
@@ -378,6 +380,12 @@ document.addEventListener('wpcf7submit', function (event) {
     pid = 'UWhrZG1vUWhHbndGV3ljcXFidnBGUT09';
     lid = 'TGxwZUt3bGNpNWt3ZTJOdlZGcjlhZz09';
 
+    } else if (path.includes('weightloss')) {
+
+    sid = 'T3ZUVVRiTmVEdWJYdEllc2xJZDlMUT09';
+    unCryptedSid = '1512420671';
+    pid = 'UWhrZG1vUWhHbndGV3ljcXFidnBGUT09';
+    lid = 'TGxwZUt3bGNpNWt3ZTJOdlZGcjlhZz09';
     } else {
 
         return;

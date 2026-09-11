@@ -33,7 +33,7 @@ $weight_loss_popup_args = [
 
 $weight_loss_banner_args = [
 
-    'offer_headline' => 'Medical Weight Loss — 3 Months for $297/Month',
+    'offer_headline' => 'Medical Weight Loss — 3 Months for $297/Month. Get Started!',
 
     'image' =>
         get_template_directory_uri() .
@@ -431,7 +431,7 @@ $weight_loss_social_proof_args = [
     'section_title' =>
         'Real Results.<br>Real Confidence.',
 
-    'video_url' => get_template_directory_uri() . '/images/bs_assets/WEIGHT_LOSS_VO.mp4',
+    'video_url' => get_template_directory_uri() . '/images/bs_assets/weightloss_patient_story.mp4',
 
     'image_alt' => 'Medical Weight Loss Patient',
 
