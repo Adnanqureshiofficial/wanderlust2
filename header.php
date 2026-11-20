@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <?php wp_head(); ?>
 
 </head>
@@ -80,7 +81,7 @@
 
             <li><a href="/">Lip Filler</a></li>
 
-            <li><a href="/botox">Botox</a></li>
+            <li><a href="/botox">Xeomin</a></li>
 
             <li><a href="/radiesse-treatment">Radiesse</a></li>
 

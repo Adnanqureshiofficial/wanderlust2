@@ -1,0 +1,1265 @@
+
+/* =========================================================
+   WANDERLUST AESTHETICS — LUMECCA IPL LANDING PAGE
+   Single stylesheet for all six landing page components
+========================================================= */
+
+
+/* =========================================================
+   01. DESIGN SYSTEM & GLOBAL STYLES
+========================================================= */
+
+:root {
+    --lumecca-green: #173D33;
+    --lumecca-green-dark: #102D26;
+    --lumecca-green-light: #285448;
+
+    --lumecca-ivory: #F7F4EC;
+    --lumecca-cream: #EFE9DC;
+    --lumecca-white: #FFFFFF;
+
+    --lumecca-gold: #C6A66B;
+    --lumecca-gold-light: #D8C39A;
+    --lumecca-gold-muted: #A98C5B;
+
+    --lumecca-text: #263B33;
+    --lumecca-text-light: #777B72;
+    --lumecca-border: rgba(23, 61, 51, 0.14);
+    --lumecca-border-light: rgba(247, 244, 236, 0.18);
+
+    --lumecca-font-heading: "Cormorant Garamond", Georgia, serif;
+    --lumecca-font-body: "Inter", Arial, sans-serif;
+
+    --lumecca-container: 1240px;
+
+    --lumecca-transition: all 0.35s ease;
+}
+
+
+/* Box sizing */
+
+.lumecca-hero *,
+.lumecca-problem *,
+.lumecca-how *,
+.lumecca-why *,
+.lumecca-areas *,
+.lumecca-results * {
+    box-sizing: border-box;
+}
+
+
+/* Shared section styling */
+
+.lumecca-hero,
+.lumecca-problem,
+.lumecca-how,
+.lumecca-why,
+.lumecca-areas,
+.lumecca-results {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Shared container */
+
+.lumecca-hero .container,
+.lumecca-problem .container,
+.lumecca-how .container,
+.lumecca-why .container,
+.lumecca-areas .container,
+.lumecca-results .container {
+    width: min(calc(100% - 80px), var(--lumecca-container));
+    margin-inline: auto;
+}
+
+
+/* Shared typography */
+
+.lumecca-hero h1,
+.lumecca-hero h2,
+.lumecca-problem h2,
+.lumecca-problem h3,
+.lumecca-how h2,
+.lumecca-how h3,
+.lumecca-why h2,
+.lumecca-why h3,
+.lumecca-areas h2,
+.lumecca-areas h3,
+.lumecca-results h2 {
+    font-family: var(--lumecca-font-heading);
+    font-weight: 400;
+    line-height: 1.08;
+    margin: 0;
+}
+
+.lumecca-hero p,
+.lumecca-problem p,
+.lumecca-how p,
+.lumecca-why p,
+.lumecca-areas p,
+.lumecca-results p {
+    font-family: var(--lumecca-font-body);
+    line-height: 1.8;
+    margin-top: 0;
+}
+
+
+/* Shared section labels */
+
+.lumecca-problem-tag,
+.lumecca-how-tag,
+.lumecca-why-tag,
+.lumecca-areas-tag,
+.lumecca-results-tag {
+    display: inline-block;
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   02. HERO SECTION
+========================================================= */
+
+.lumecca-hero {
+    background: linear-gradient(
+        to bottom,
+        #1d3b39 0%,
+        #152724 90%,
+        
+        #0f1916 100%
+    );
+    color: var(--lumecca-ivory);
+    padding: 35px 0 110px;
+}
+
+/* Hero image */
+
+.lumecca-hero-image {
+    width: 100%;
+    height: 490px;
+    overflow: hidden;
+    margin-bottom: 75px;
+    border-radius:12px;
+}
+
+.lumecca-hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Hero content grid */
+
+.lumecca-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 90px;
+}
+
+
+/* Hero left */
+
+.lumecca-hero-left {
+    max-width: 680px;
+}
+
+.lumecca-hero-left .lumecca-hero-badge {
+    display: inline-block;
+    color: var(--lumecca-gold-light);
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+}
+
+.lumecca-hero-left h1 {
+    font-size: clamp(52px, 6vw, 82px);
+    letter-spacing: -0.035em;
+    margin-bottom: 28px;
+    color: var(--lumecca-ivory);
+}
+
+.lumecca-hero-left h1 em {
+    color: var(--lumecca-gold);
+    font-weight: 400;
+}
+
+.lumecca-hero-left p {
+    max-width: 570px;
+    color: rgba(247, 244, 236, 0.78);
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+
+/* Hero CTA */
+
+.lumecca-hero-left .lumecca-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 36px;
+    background: var(--lumecca-gold);
+    color: var(--lumecca-green-dark);
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    transition: var(--lumecca-transition);
+}
+
+.lumecca-hero-left .lumecca-hero-cta:hover {
+    background: var(--lumecca-gold-light);
+    transform: translateY(-3px);
+}
+
+
+/* Hero trust bullets */
+
+.lumecca-hero-trust {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 25px;
+    margin-top: 45px;
+    font-family: var(--lumecca-font-body);
+    padding-top: 30px;
+    border-top: 1px solid var(--lumecca-gold);
+}
+
+.lumecca-hero-trust li {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+    color: rgba(247, 244, 236, 0.85);
+    font-family: var(--lumecca-font-body);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.lumecca-hero-trust li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--lumecca-gold);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+
+
+/* Hero Offer Card */
+
+.lumecca-hero-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.lumecca-offer-card {
+    width: 100%;
+    max-width: 410px;
+    padding: 20px;
+    background: var(--lumecca-ivory);
+    color: var(--lumecca-green);
+    border-radius: 13px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.lumecca-offer-inner {
+    border: 2px solid #cba45e;
+    border-radius: 11px;
+    padding: 36px 18px 35px;
+    box-sizing: border-box;
+}
+
+/* Offer Heading */
+
+.lumecca-offer-card h2 {
+    max-width: 290px;
+    margin: 0 auto 16px;
+    font-family: var(--lumecca-font-display);
+    font-size: 42px;
+    line-height: 0.98;
+    font-weight: 400;
+    color: var(--lumecca-green);
+}
+
+.lumecca-offer-card h2::first-line {
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+/* Description */
+
+.lumecca-offer-card p {
+    max-width: 290px;
+    margin: 0 auto 22px;
+    color: var(--lumecca-text-light);
+    font-family: var(--lumecca-font-body);
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* CTA Button */
+
+.lumecca-offer-card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 264px;
+    min-height: 49px;
+    margin: 0 auto;
+
+    background: #101815;
+    color: var(--lumecca-ivory);
+
+    border-radius: 50px;
+    border: none;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-decoration: none;
+
+    transition: var(--lumecca-transition);
+}
+
+.lumecca-offer-card a:hover {
+    background: var(--lumecca-gold);
+    color: var(--lumecca-green-dark);
+}
+/* =========================================================
+   03. PROBLEM SECTION
+========================================================= */
+
+.lumecca-problem {
+    background: var(--lumecca-ivory);
+    color: var(--lumecca-green);
+    padding: 120px 0;
+}
+
+.lumecca-problem-header {
+    max-width: 760px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.lumecca-problem-tag {
+    color: var(--lumecca-gold-muted);
+    font-size: clamp(32px, 1vw, 64px);
+}
+
+.lumecca-problem-title {
+    font-size: clamp(42px, 2vw, 64px);
+    letter-spacing: -0.025em;
+    margin-bottom: 24px !important;
+}
+
+.lumecca-problem-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--lumecca-text-light);
+    font-size: 13px;
+}
+
+
+
+/* =========================================
+   LUMECCA — PROBLEM CARDS
+========================================= */
+
+.lumecca-problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 60px;
+}
+
+/* Main Card */
+
+.lumecca-problem-card {
+    background: #f8f7f3;
+    border: 1.5px solid #cba45e;
+    border-radius: 18px;
+    padding: 7px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    transition: var(--lumecca-transition);
+}
+
+.lumecca-problem-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Card Image */
+
+.lumecca-problem-card-image {
+    width: 100%;
+    aspect-ratio: 1.3 / 1;
+    overflow: hidden;
+    border-radius: 13px;
+}
+
+.lumecca-problem-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.lumecca-problem-card:hover .lumecca-problem-card-image img {
+    transform: scale(1.025);
+}
+
+/* Card Content */
+
+.lumecca-problem-card-content {
+    padding: 8px 11px 9px;
+}
+
+/* Number */
+
+.lumecca-problem-card-number {
+    display: inline;
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-display);
+    font-size: 19px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+/* Title */
+
+.lumecca-problem-card-content h3 {
+    display: inline;
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-display);
+    font-size: 19px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Description */
+
+.lumecca-problem-card-content p {
+    color: var(--lumecca-text-light);
+    font-family: var(--lumecca-font-body);
+    font-size: 11px;
+    line-height: 1.45;
+    font-weight: 400;
+    margin: 3px 0 0;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .lumecca-problem-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .lumecca-problem-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .lumecca-problem-card-content {
+        padding: 9px 10px 11px;
+    }
+
+}
+
+
+/* Problem bottom statement */
+
+.lumecca-problem-bottom {
+    max-width: 740px;
+    margin: 65px auto 0;
+    padding-top: 35px;
+    border-top: 1px solid var(--lumecca-border);
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-heading);
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+/* =========================================================
+   04. HOW LUMECCA WORKS
+========================================================= */
+
+.lumecca-how {
+    background: var(--lumecca-green);
+    color: var(--lumecca-ivory);
+    padding: 120px 0;
+}
+
+.lumecca-how-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 95px;
+}
+
+
+/* How content */
+
+.lumecca-how-content {
+    max-width: 610px;
+}
+
+.lumecca-how-tag {
+    color: var(--lumecca-gold-light);
+}
+
+.lumecca-how-content h2 {
+    font-size: clamp(48px, 5vw, 68px);
+    letter-spacing: -0.025em;
+    margin-bottom: 25px;
+    color: var(--lumecca-ivory);
+}
+
+.lumecca-how-description {
+    color: rgba(247, 244, 236, 0.75);
+    font-size: 13px;
+    margin-bottom: 45px;
+}
+
+
+/* Process heading */
+
+.lumecca-how-process h3 {
+    color: var(--lumecca-gold-light);
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+
+/* Process steps */
+
+.lumecca-how-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.lumecca-how-step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-top: 1px solid var(--lumecca-border-light);
+}
+
+.lumecca-how-step-number {
+    color: var(--lumecca-gold);
+    font-family: var(--lumecca-font-heading);
+    font-size: 27px;
+}
+
+.lumecca-how-step-content h4 {
+    margin: 0 0 8px;
+    color: var(--lumecca-ivory);
+    font-family: var(--lumecca-font-body);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lumecca-how-step-content p {
+    color: rgba(247, 244, 236, 0.68);
+    font-size: 11px;
+    margin-bottom: 0;
+}
+
+
+/* How image */
+
+.lumecca-how-image {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.lumecca-how-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   05. WHY WANDERLUST
+========================================================= */
+
+.lumecca-why {
+    background: var(--lumecca-cream);
+    color: var(--lumecca-green);
+    padding: 120px 0;
+}
+
+.lumecca-why-header {
+    max-width: 760px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.lumecca-why-tag {
+    color: var(--lumecca-gold-muted);
+}
+
+.lumecca-why-title {
+    font-size: clamp(44px, 5vw, 65px);
+    margin-bottom: 24px !important;
+    letter-spacing: -0.025em;
+}
+
+.lumecca-why-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--lumecca-text-light);
+    font-size: 13px;
+}
+
+
+/* Why cards */
+
+.lumecca-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--lumecca-border);
+    border-bottom: 1px solid var(--lumecca-border);
+}
+
+.lumecca-why-card {
+    padding: 45px 38px 50px;
+    border-right: 1px solid var(--lumecca-border);
+    transition: var(--lumecca-transition);
+}
+
+.lumecca-why-card:last-child {
+    border-right: none;
+}
+
+.lumecca-why-card:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.lumecca-why-card-number {
+    display: block;
+    color: var(--lumecca-gold-muted);
+    font-family: var(--lumecca-font-heading);
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.lumecca-why-card-title {
+    color: var(--lumecca-green);
+    font-size: 31px;
+    line-height: 1.15;
+    margin-bottom: 18px !important;
+}
+
+.lumecca-why-card-description {
+    color: var(--lumecca-text-light);
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   06. AREAS & SKIN CONCERNS
+========================================================= */
+
+.lumecca-areas {
+    background: var(--lumecca-green-dark);
+    color: var(--lumecca-ivory);
+    padding: 120px 0;
+}
+
+.lumecca-areas-header {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.lumecca-areas-tag {
+    color: var(--lumecca-gold-light);
+}
+
+.lumecca-areas-title {
+    color: var(--lumecca-ivory);
+    font-size: clamp(44px, 5vw, 68px);
+    letter-spacing: -0.025em;
+}
+
+
+/* Areas image gallery */
+
+.lumecca-areas-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 75px;
+}
+
+.lumecca-areas-image {
+    height: 330px;
+    overflow: hidden;
+}
+
+.lumecca-areas-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.lumecca-areas-image:hover img {
+    transform: scale(1.045);
+}
+
+
+/* Areas subheading */
+
+.lumecca-areas-content-title {
+    color: var(--lumecca-ivory);
+    font-size: clamp(34px, 4vw, 48px);
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+
+/* Areas table */
+
+.lumecca-areas-table-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+    background: var(--lumecca-ivory);
+}
+
+.lumecca-areas-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-body);
+    text-align: left;
+}
+
+.lumecca-areas-table th {
+    padding: 23px 30px;
+    background: var(--lumecca-cream);
+    color: var(--lumecca-green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.lumecca-areas-table td {
+    padding: 21px 30px;
+    border-top: 1px solid rgba(23, 61, 51, 0.12);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.lumecca-areas-table tbody tr {
+    transition: background 0.25s ease;
+}
+
+.lumecca-areas-table tbody tr:hover {
+    background: var(--lumecca-white);
+}
+
+
+/* =========================================================
+   07. RESULTS
+========================================================= */
+
+.lumecca-results {
+    background: #E8DEC9;
+    color: var(--lumecca-green);
+    padding: 120px 0;
+}
+
+.lumecca-results-header {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.lumecca-results-tag {
+    color: var(--lumecca-gold-muted);
+}
+
+.lumecca-results-title {
+    color: var(--lumecca-green);
+    font-size: clamp(48px, 5vw, 70px);
+    margin-bottom: 20px !important;
+}
+
+.lumecca-results-description {
+    color: var(--lumecca-text-light);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+/* Before and after comparison */
+
+.lumecca-results-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.lumecca-results-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.lumecca-results-image {
+    width: 100%;
+    height: 490px;
+    overflow: hidden;
+    background: var(--lumecca-cream);
+}
+
+.lumecca-results-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lumecca-results-label {
+    display: inline-block;
+    padding: 11px 20px;
+    margin-bottom: 14px;
+    background: var(--lumecca-green);
+    color: var(--lumecca-ivory);
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+
+/* Results disclaimer */
+
+.lumecca-results-disclaimer {
+    margin: 35px auto 0;
+    color: #77766C;
+    font-size: 11px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   08. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .lumecca-hero .container,
+    .lumecca-problem .container,
+    .lumecca-how .container,
+    .lumecca-why .container,
+    .lumecca-areas .container,
+    .lumecca-results .container {
+        width: min(calc(100% - 50px), var(--lumecca-container));
+    }
+
+
+    /* Hero */
+
+    .lumecca-hero-grid {
+        gap: 45px;
+    }
+
+    .lumecca-hero-image {
+        height: 400px;
+        margin-bottom: 55px;
+    }
+
+    .lumecca-hero-left h1 {
+        font-size: 60px;
+    }
+
+    .lumecca-offer-card {
+        padding: 38px 28px;
+    }
+
+    .lumecca-offer-card h2 {
+        font-size: 35px;
+    }
+
+
+    /* Problem */
+
+    .lumecca-problem-card-image {
+        height: 230px;
+    }
+
+    .lumecca-problem-card-content {
+        padding: 25px 22px 30px;
+    }
+
+
+    /* How */
+
+    .lumecca-how-grid {
+        gap: 50px;
+    }
+
+    .lumecca-how-image {
+        height: 570px;
+    }
+
+
+    /* Why */
+
+    .lumecca-why-card {
+        padding: 38px 25px;
+    }
+
+
+    /* Areas */
+
+    .lumecca-areas-image {
+        height: 260px;
+    }
+
+
+    /* Results */
+
+    .lumecca-results-image {
+        height: 400px;
+    }
+
+}
+
+
+/* =========================================================
+   09. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .lumecca-hero .container,
+    .lumecca-problem .container,
+    .lumecca-how .container,
+    .lumecca-why .container,
+    .lumecca-areas .container,
+    .lumecca-results .container {
+        width: calc(100% - 40px);
+    }
+
+
+    /* Shared section spacing */
+
+    .lumecca-problem,
+    .lumecca-how,
+    .lumecca-why,
+    .lumecca-areas,
+    .lumecca-results {
+        padding: 80px 0;
+    }
+
+
+    /* Hero */
+
+    .lumecca-hero {
+        padding: 20px 0 80px;
+    }
+
+    .lumecca-hero-image {
+        height: 300px;
+        margin-bottom: 45px;
+    }
+
+    .lumecca-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .lumecca-hero-left h1 {
+        font-size: clamp(47px, 12vw, 62px);
+    }
+
+    .lumecca-hero-left .lumecca-hero-badge {
+        font-size: 9px;
+        margin-bottom: 20px;
+    }
+
+    .lumecca-hero-left p {
+        font-size: 13px;
+    }
+
+    .lumecca-hero-trust {
+        gap: 15px 12px;
+        margin-top: 32px;
+        padding-top: 25px;
+    }
+
+    .lumecca-hero-trust li {
+        font-size: 10px;
+    }
+
+    .lumecca-hero-right {
+        justify-content: center;
+    }
+
+    .lumecca-offer-card {
+        max-width: none;
+        padding: 38px 28px;
+    }
+
+    .lumecca-offer-card h2 {
+        font-size: 39px;
+    }
+
+
+    
+
+    .lumecca-problem-bottom {
+        margin-top: 45px;
+        padding-top: 28px;
+        font-size: 25px;
+    }
+
+
+    /* How */
+
+    .lumecca-how-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .lumecca-how-content h2 {
+        font-size: 48px;
+    }
+
+    .lumecca-how-description {
+        font-size: 12px;
+        margin-bottom: 35px;
+    }
+
+    .lumecca-how-process h3 {
+        font-size: 30px;
+    }
+
+    .lumecca-how-step {
+        grid-template-columns: 38px 1fr;
+        gap: 15px;
+    }
+
+    .lumecca-how-image {
+        height: 380px;
+    }
+
+
+    /* Why */
+
+    .lumecca-why-header {
+        margin-bottom: 45px;
+    }
+
+    .lumecca-why-title {
+        font-size: 45px;
+    }
+
+    .lumecca-why-description {
+        font-size: 12px;
+    }
+
+    .lumecca-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lumecca-why-card {
+        padding: 32px 15px;
+        border-right: none;
+        border-bottom: 1px solid var(--lumecca-border);
+    }
+
+    .lumecca-why-card:last-child {
+        border-bottom: none;
+    }
+
+    .lumecca-why-card-number {
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
+
+    .lumecca-why-card-title {
+        font-size: 30px;
+    }
+
+
+    /* Areas */
+
+    .lumecca-areas-header {
+        margin-bottom: 40px;
+    }
+
+    .lumecca-areas-title {
+        font-size: 44px;
+    }
+
+    .lumecca-areas-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .lumecca-areas-image {
+        height: 300px;
+    }
+
+    .lumecca-areas-content-title {
+        font-size: 35px;
+        margin-bottom: 30px !important;
+    }
+
+    .lumecca-areas-table th {
+        padding: 17px 15px;
+        font-size: 9px;
+    }
+
+    .lumecca-areas-table td {
+        padding: 17px 15px;
+        font-size: 11px;
+        min-width: 130px;
+    }
+
+
+    /* Results */
+
+    .lumecca-results-header {
+        margin-bottom: 40px;
+    }
+
+    .lumecca-results-title {
+        font-size: 50px;
+    }
+
+    .lumecca-results-comparison {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .lumecca-results-image {
+        height: 380px;
+    }
+
+}
+
+
+/* =========================================================
+   10. SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .lumecca-hero .container,
+    .lumecca-problem .container,
+    .lumecca-how .container,
+    .lumecca-why .container,
+    .lumecca-areas .container,
+    .lumecca-results .container {
+        width: calc(100% - 32px);
+    }
+
+    .lumecca-hero-image {
+        height: 240px;
+    }
+
+    .lumecca-hero-left h1 {
+        font-size: 45px;
+    }
+
+    .lumecca-hero-trust {
+        grid-template-columns: 1fr;
+    }
+
+    .lumecca-problem-title,
+    .lumecca-why-title,
+    .lumecca-areas-title {
+        font-size: 39px;
+    }
+
+    .lumecca-how-content h2 {
+        font-size: 43px;
+    }
+
+    .lumecca-areas-image {
+        height: 250px;
+    }
+
+    .lumecca-results-image {
+        height: 320px;
+    }
+
+}
+
+
+/* =========================================================
+   11. ACCESSIBILITY & REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lumecca-hero *,
+    .lumecca-problem *,
+    .lumecca-how *,
+    .lumecca-why *,
+    .lumecca-areas *,
+    .lumecca-results * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}
