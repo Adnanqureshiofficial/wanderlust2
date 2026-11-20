@@ -10,12 +10,11 @@
 
     <video
         class="testimonial-video"
-        nocontrols
         preload="metadata"
         playsinline
         muted
         autoplay
-        loading="lazy"
+        loop
         poster="<?php echo esc_url( $args['poster_image'] ?? '' ); ?>">
 
         <source
@@ -25,6 +24,15 @@
         Your browser does not support the video tag.
 
     </video>
+
+    <button
+        class="video-sound-toggle"
+        type="button"
+        aria-label="Toggle Sound">
+
+        🔇
+
+    </button>
 
 </div>
 
@@ -64,13 +72,13 @@
 
                 foreach ( $args['content'] as $paragraph ) : ?>
 
-                    <p><?php echo esc_html( $paragraph ); ?></p>
+                    <i><?php echo esc_html( $paragraph ); ?></i>
 
                 <?php endforeach;
 
             else : ?>
 
-                <p><?php echo esc_html( $args['content'] ); ?></p>
+                <i><?php echo esc_html( $args['content'] ); ?></i>
 
             <?php endif; ?>
 

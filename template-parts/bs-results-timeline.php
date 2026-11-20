@@ -85,6 +85,15 @@
             </div>
 
         <?php endif; ?>
+        <?php if ( ! empty( $args['bottom_badge'] ) ) : ?>
+
+<div class="timeline-badge">
+
+    <?php echo esc_html( $args['bottom_badge'] ); ?>
+
+</div>
+
+<?php endif; ?>
 
     </div>
 

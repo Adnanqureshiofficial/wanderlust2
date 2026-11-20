@@ -1,4 +1,4 @@
-\<!-- template-parts/bs-final-cta.php -->
+<!-- template-parts/bs-final-cta.php -->
 <section class="final-cta section" id="CTAForm">
     <div class="container">
 
@@ -27,6 +27,20 @@
                 <!-- Dynamic Form Output Execution -->
                 <?php if ( ! empty( $args['form_shortcode'] ) ) : ?>
                     <div class="bs-form-container">
+                        <?php if ( ! empty( $args['service_name'] ) ) : ?>
+
+    <div class="selected-service">
+
+        <span class="selected-service-label">Selected Service:</span>
+
+        <span class="selected-service-name">
+            <?php echo esc_html( $args['service_name'] ); ?>
+        </span>
+
+    </div>
+
+<?php endif; ?>
+
                         <?php 
                         // Executes the parsed shortcode string securely
                         echo do_shortcode( $args['form_shortcode'] ); 

@@ -176,6 +176,8 @@
 
                                     </div>
 
+                                   
+
 
                                     <strong class="offer-card-price">
 
@@ -184,6 +186,13 @@
                                     </strong>
 
                                 </div>
+                                <?php if (!empty($tier['typesofservice']) && is_array($tier['typesofservice'])) : ?>
+            <div class="price-services">
+                <?php foreach ($tier['typesofservice'] as $service) : ?>
+                    <span><?php echo esc_html($service); ?></span>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
 
                             <?php endforeach; ?>
 

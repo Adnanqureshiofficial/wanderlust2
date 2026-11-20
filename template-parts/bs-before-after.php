@@ -21,18 +21,17 @@
             <?php endif; ?>
         </div>
 
-     <div class="results-slider">
+   <div class="results-slider">
 
     <div class="results-track">
 
-        <?php foreach($args['gallery_images'] as $image): ?>
+        <?php foreach ( $args['gallery_images'] as $image ) : ?>
 
             <div class="result-slide">
 
                 <img
-                    src="<?php echo esc_url($image['url']); ?>"
-                    alt="<?php echo esc_attr($image['alt']); ?>"
-                >
+                    src="<?php echo esc_url( $image['url'] ); ?>"
+                    alt="<?php echo esc_attr( $image['alt'] ); ?>">
 
             </div>
 
@@ -40,8 +39,16 @@
 
     </div>
 
-</div>
+    <button
+        class="slider-toggle"
+        type="button"
+        aria-label="Pause Slideshow">
 
+        | |
+
+    </button>
+
+</div>
         <!-- Explainer Caption Hint -->
         <?php if ( ! empty( $args['drag_hint_text'] ) ) : ?>
             <div class="drag-text">
