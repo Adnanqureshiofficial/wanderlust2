@@ -1,0 +1,990 @@
+
+/* =========================================================
+   LUMECCA / MORPHEUS8 – FAQ SECTION
+   Uses the shared Lumecca design-system variables.
+========================================================= */
+
+.lumecca-faq {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: clamp(64px, 8vw, 108px) 0;
+    background: var(--lumecca-ivory);
+    color: var(--lumecca-text);
+}
+
+.lumecca-faq *,
+.lumecca-faq *::before,
+.lumecca-faq *::after {
+    box-sizing: border-box;
+}
+
+.lumecca-faq .container {
+    width: min(calc(100% - 80px), var(--lumecca-container));
+    margin-inline: auto;
+}
+
+/* Header */
+
+.lumecca-faq-header {
+    max-width: 760px;
+    margin: 0 auto clamp(30px, 4vw, 48px);
+    text-align: center;
+}
+
+.lumecca-faq-tag {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--lumecca-gold-muted);
+    font-family: var(--lumecca-font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.lumecca-faq-title {
+    margin: 0;
+    color: var(--lumecca-text);
+    font-family: var(--lumecca-font-heading);
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+
+/* FAQ list */
+
+.lumecca-faq-list {
+    width: min(100%, 900px);
+    margin-inline: auto;
+    border-top: 1px solid var(--lumecca-border);
+}
+
+.lumecca-faq-item {
+    border-bottom: 1px solid var(--lumecca-border);
+}
+
+/* Question row */
+
+.lumecca-faq-question {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 24px;
+    align-items: center;
+    gap: 18px;
+    min-height: 82px;
+    padding: 20px 8px;
+    list-style: none;
+    cursor: pointer;
+    color: var(--lumecca-text);
+    transition: color 0.25s ease;
+}
+
+.lumecca-faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.lumecca-faq-question::marker {
+    content: "";
+}
+
+.lumecca-faq-number {
+    color: var(--lumecca-gold-muted);
+    font-family: var(--lumecca-font-heading);
+    font-size: 25px;
+    line-height: 1;
+}
+
+.lumecca-faq-question-text {
+    font-family: var(--lumecca-font-body);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Plus / minus icon */
+
+.lumecca-faq-icon {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    justify-self: end;
+    color: var(--lumecca-green);
+}
+
+.lumecca-faq-icon::before,
+.lumecca-faq-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 1.5px;
+    background: currentColor;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease;
+}
+
+.lumecca-faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.lumecca-faq-item[open] .lumecca-faq-icon::after {
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+/* Answer */
+
+.lumecca-faq-answer {
+    padding: 0 50px 24px 68px;
+}
+
+.lumecca-faq-answer p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--lumecca-text-light);
+    font-family: var(--lumecca-font-body);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Interaction states */
+
+.lumecca-faq-question:hover,
+.lumecca-faq-question:focus-visible {
+    color: var(--lumecca-green-light);
+}
+
+.lumecca-faq-question:focus-visible {
+    outline: 2px solid var(--lumecca-gold);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+/*=========================================================
+= SPECIAL OFFER
+=========================================================*/
+
+.lumecca-offer {
+    position: relative;
+    width: 100%;
+    padding: 110px 0;
+    background: var(--lumecca-green);
+    overflow: hidden;
+}
+
+.lumecca-offer__container {
+    width: min(calc(100% - 80px), var(--lumecca-container));
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 85px;
+}
+
+
+/*=========================================================
+= IMAGE
+=========================================================*/
+
+.lumecca-offer__image {
+    position: relative;
+    height: 650px;
+    min-height: 500px;
+    overflow: hidden;
+    background: var(--lumecca-green-dark);
+}
+
+.lumecca-offer__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.lumecca-offer__image-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(16, 45, 38, 0.65),
+        transparent 45%
+    );
+}
+
+.lumecca-offer__image-badge {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 18px 22px;
+    background: rgba(247, 244, 236, 0.94);
+    color: var(--lumecca-green);
+}
+
+.lumecca-offer__image-badge span:first-child {
+    font-family: var(--lumecca-font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+.lumecca-offer__image-badge strong {
+    font-family: var(--lumecca-font-heading);
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.lumecca-offer__image-badge span:last-child {
+    font-family: var(--lumecca-font-body);
+    font-size: 11px;
+    color: var(--lumecca-text-light);
+}
+
+
+/*=========================================================
+= CONTENT
+=========================================================*/
+
+.lumecca-offer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.lumecca-offer__header {
+    margin-bottom: 32px;
+}
+
+.lumecca-offer__tag {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+
+    color: var(--lumecca-gold-light);
+}
+
+.lumecca-offer__title {
+    max-width: 600px;
+    margin: 0 0 18px;
+
+    font-family: var(--lumecca-font-heading);
+    font-size: clamp(42px, 4.5vw, 62px);
+    font-weight: 400;
+    line-height: 1.08;
+
+    color: var(--lumecca-ivory);
+}
+
+.lumecca-offer__description {
+    max-width: 520px;
+    margin: 0;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: rgba(247, 244, 236, 0.72);
+}
+
+
+/*=========================================================
+= PACKAGE INCLUSIONS
+=========================================================*/
+
+.lumecca-offer__inclusions {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.lumecca-offer__inclusions-label {
+    display: block;
+    margin-bottom: 18px;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+
+    color: var(--lumecca-gold-light);
+}
+
+.lumecca-offer__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lumecca-offer__list li {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: var(--lumecca-ivory);
+}
+
+.lumecca-offer__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 19px;
+    width: 19px;
+    height: 19px;
+
+    border: 1px solid var(--lumecca-gold);
+    border-radius: 50%;
+
+    color: var(--lumecca-gold-light);
+}
+
+.lumecca-offer__check svg {
+    width: 12px;
+    height: 12px;
+}
+
+
+/*=========================================================
+= PRICE CARD
+=========================================================*/
+
+.lumecca-offer__price-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 24px 28px;
+    margin-bottom: 25px;
+
+    background: rgba(247, 244, 236, 0.08);
+    border: 1px solid rgba(198, 166, 107, 0.4);
+}
+
+.lumecca-offer__price-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lumecca-offer__price-label {
+    margin-bottom: 4px;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    color: var(--lumecca-gold-light);
+}
+
+.lumecca-offer__price {
+    font-family: var(--lumecca-font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.15;
+
+    color: var(--lumecca-ivory);
+}
+
+.lumecca-offer__package-label {
+    margin-top: 5px;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--lumecca-ivory);
+}
+
+.lumecca-offer__package-note {
+    margin-top: 5px;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 11px;
+
+    color: rgba(247, 244, 236, 0.65);
+}
+
+.lumecca-offer__price-decoration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+
+    font-family: var(--lumecca-font-heading);
+    font-size: 25px;
+    line-height: 1;
+
+    color: var(--lumecca-gold);
+}
+
+
+/*=========================================================
+= CTA
+=========================================================*/
+
+.lumecca-offer__action {
+    width: 100%;
+}
+
+.lumecca-offer__button {
+    width: 100%;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 18px 24px;
+
+    background: var(--lumecca-gold);
+    color: var(--lumecca-green-dark);
+
+    text-decoration: none;
+    transition: var(--lumecca-transition);
+}
+
+.lumecca-offer__button span {
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.lumecca-offer__button svg {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.lumecca-offer__button:hover {
+    background: var(--lumecca-gold-light);
+}
+
+.lumecca-offer__button:hover svg {
+    transform: translateX(5px);
+}
+
+.lumecca-offer__disclaimer {
+    margin: 14px 0 0;
+
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    line-height: 1.7;
+
+    color: rgba(247, 244, 236, 0.55);
+}
+
+
+/*=========================================================
+= TABLET
+=========================================================*/
+
+@media (max-width: 1024px) {
+
+    .lumecca-offer {
+        padding: 85px 0;
+    }
+
+    .lumecca-offer__container {
+        gap: 45px;
+    }
+
+    .lumecca-offer__image {
+        height: 570px;
+    }
+
+    .lumecca-offer__title {
+        font-size: 48px;
+    }
+
+    .lumecca-offer__price {
+        font-size: 44px;
+    }
+
+}
+
+
+/*=========================================================
+= MOBILE
+=========================================================*/
+
+@media (max-width: 767px) {
+
+    .lumecca-offer {
+        padding: 65px 0;
+    }
+
+    .lumecca-offer__container {
+        width: min(calc(100% - 40px), var(--lumecca-container));
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .lumecca-offer__image {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 5;
+    }
+
+    .lumecca-offer__image-badge {
+        left: 18px;
+        bottom: 18px;
+        padding: 14px 17px;
+    }
+
+    .lumecca-offer__image-badge strong {
+        font-size: 24px;
+    }
+
+    .lumecca-offer__header {
+        margin-bottom: 27px;
+    }
+
+    .lumecca-offer__tag {
+        margin-bottom: 15px;
+        font-size: 9px;
+    }
+
+    .lumecca-offer__title {
+        font-size: clamp(39px, 10vw, 49px);
+    }
+
+    .lumecca-offer__description {
+        font-size: 13px;
+    }
+
+    .lumecca-offer__inclusions {
+        margin-bottom: 27px;
+    }
+
+    .lumecca-offer__list {
+        gap: 14px 12px;
+    }
+
+    .lumecca-offer__list li {
+        font-size: 11px;
+    }
+
+    .lumecca-offer__price-card {
+        padding: 20px;
+    }
+
+    .lumecca-offer__price {
+        font-size: 43px;
+    }
+
+    .lumecca-offer__price-decoration {
+        font-size: 20px;
+    }
+
+    .lumecca-offer__button {
+        min-height: 56px;
+        padding: 17px 18px;
+    }
+
+    .lumecca-offer__button span {
+        font-size: 9px;
+    }
+
+}
+
+
+/*=========================================================
+= SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 380px) {
+
+    .lumecca-offer__container {
+        width: calc(100% - 32px);
+    }
+
+    .lumecca-offer__list {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .lumecca-offer__price-card {
+        padding: 17px;
+    }
+
+    .lumecca-offer__price {
+        font-size: 38px;
+    }
+
+    .lumecca-offer__price-decoration {
+        font-size: 17px;
+    }
+
+}
+
+
+
+
+
+/*=========================================================
+= LUMECCA FINAL CTA
+=========================================================*/
+
+.final-cta {
+    position: relative;
+    padding: 100px 0;
+    background: var(--lumecca-ivory);
+    overflow: hidden;
+}
+
+.final-cta .container {
+    width: min(calc(100% - 80px), var(--lumecca-container));
+    margin-inline: auto;
+}
+
+/*=========================================================
+= CTA CARD
+=========================================================*/
+
+.final-cta .cta-card {
+    position: relative;
+    padding: 65px;
+    background: var(--lumecca-white);
+    border: 1px solid var(--lumecca-border);
+    border-radius: 4px;
+    box-shadow: 0 15px 50px rgba(23, 61, 51, 0.06);
+}
+
+.final-cta .cta-inner {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/*=========================================================
+= LEFT CONTENT
+=========================================================*/
+
+.final-cta .cta-content {
+    width: 100%;
+    max-width: 540px;
+}
+
+.final-cta .section-tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--lumecca-gold-muted);
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.final-cta .section-title {
+    margin: 0 0 22px;
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-heading);
+    font-size: clamp(38px, 4vw, 54px);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.final-cta .section-description {
+    margin: 0;
+    color: var(--lumecca-text-light);
+    font-family: var(--lumecca-font-body);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/*=========================================================
+= OFFER DETAILS
+=========================================================*/
+
+.final-cta .final-cta-offer {
+    margin-top: 32px;
+    padding: 26px 28px;
+    background: var(--lumecca-ivory);
+    border-left: 3px solid var(--lumecca-gold);
+}
+
+.final-cta .final-cta-offer-label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--lumecca-gold-muted);
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.final-cta .final-cta-offer-price {
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-heading);
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.final-cta .final-cta-offer-note {
+    display: block;
+    margin-top: 12px;
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.final-cta .final-cta-offer-description {
+    margin: 12px 0 0;
+    color: var(--lumecca-text-light);
+    font-family: var(--lumecca-font-body);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/*=========================================================
+= FORM CONTAINER
+=========================================================*/
+
+.final-cta .bs-form-container {
+    width: 100%;
+    min-width: 0;
+    padding: 35px;
+    background: var(--lumecca-ivory);
+    border: 1px solid var(--lumecca-border);
+}
+
+.final-cta .selected-service {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--lumecca-border);
+}
+
+.final-cta .selected-service-label {
+    color: var(--lumecca-text-light);
+    font-family: var(--lumecca-font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.final-cta .selected-service-name {
+    color: var(--lumecca-green);
+    font-family: var(--lumecca-font-heading);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/*=========================================================
+= CONTACT FORM 7
+=========================================================*/
+
+.final-cta .wpcf7 {
+    width: 100%;
+}
+
+.final-cta .wpcf7 form {
+    width: 100%;
+}
+
+.final-cta .wpcf7 p {
+    margin: 0 0 16px;
+}
+
+.final-cta .wpcf7 label {
+    display: block;
+    color: var(--lumecca-text);
+    font-family: var(--lumecca-font-body);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.final-cta .wpcf7 input:not([type="submit"]),
+.final-cta .wpcf7 select,
+.final-cta .wpcf7 textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 13px 15px;
+    color: var(--lumecca-text);
+    background: var(--lumecca-white);
+    border: 1px solid var(--lumecca-border);
+    border-radius: 0;
+    outline: none;
+    font-family: var(--lumecca-font-body);
+    font-size: 13px;
+    transition: var(--lumecca-transition);
+    box-sizing: border-box;
+}
+
+.final-cta .wpcf7 input:focus,
+.final-cta .wpcf7 select:focus,
+.final-cta .wpcf7 textarea:focus {
+    border-color: var(--lumecca-gold);
+}
+
+.final-cta .wpcf7 textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.final-cta .wpcf7 input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 22px;
+    color: var(--lumecca-white);
+    background: var(--lumecca-green);
+    border: 1px solid var(--lumecca-green);
+    border-radius: 0;
+    cursor: pointer;
+    font-family: var(--lumecca-font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: var(--lumecca-transition);
+}
+
+.final-cta .wpcf7 input[type="submit"]:hover {
+    color: var(--lumecca-green);
+    background: transparent;
+}
+
+.final-cta .wpcf7-not-valid-tip {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.final-cta .wpcf7-response-output {
+    margin: 20px 0 0 !important;
+    padding: 12px !important;
+    font-family: var(--lumecca-font-body);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.final-cta .wpcf7-spinner {
+    display: block;
+    margin: 12px auto 0;
+}
+
+/*=========================================================
+= RESPONSIVE
+=========================================================*/
+
+@media (max-width: 991px) {
+
+    .final-cta {
+        padding: 75px 0;
+    }
+
+    .final-cta .cta-card {
+        padding: 45px;
+    }
+
+    .final-cta .cta-inner {
+        gap: 35px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .final-cta .bs-form-container {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .final-cta {
+        padding: 60px 0;
+    }
+
+    .final-cta .container {
+        width: min(calc(100% - 36px), var(--lumecca-container));
+    }
+
+    .final-cta .cta-card {
+        padding: 30px 22px;
+    }
+
+    .final-cta .cta-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .final-cta .cta-content {
+        max-width: 100%;
+    }
+
+    .final-cta .section-title {
+        font-size: 38px;
+    }
+
+    .final-cta .final-cta-offer {
+        padding: 22px;
+    }
+
+    .final-cta .final-cta-offer-price {
+        font-size: 44px;
+    }
+
+    .final-cta .bs-form-container {
+        padding: 22px 18px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .final-cta .cta-card {
+        padding: 25px 16px;
+    }
+
+    .final-cta .section-title {
+        font-size: 33px;
+    }
+
+}
+
+

@@ -4,7 +4,7 @@
 Template Name: Lumecca IPL Landing Page
 */
 
-get_header();
+get_header("lumecca");
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ $lumecca_hero_args = [
 
     'description' => 'Lumecca IPL Photofacial uses advanced Intense Pulsed Light technology to target visible pigmentation and certain types of facial redness, helping your skin look clearer, brighter and more even.',
 
-    'image_url' => get_template_directory_uri() . '/assets/images/lumecca/lumecca-hero.jpeg',
+    'image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/lumecca-hero.jpeg',
     'image_alt' => 'Lumecca IPL photofacial treatment at Wanderlust Aesthetics',
 
     'main_cta_text' => 'APPLY NOW',
@@ -59,21 +59,21 @@ $lumecca_problem_args = [
             'number' => '01',
             'title' => 'Sunspots & Sun Damage',
             'description' => "Visible spots and pigmentation that affect your skin's natural-looking clarity.",
-            'image_url' => get_template_directory_uri() . '/assets/images/lumecca/problem-sunspots.jpg',
+            'image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/problem-sunspots.jpg',
             'image_alt' => 'Visible sunspots and sun damage on facial skin',
         ],
         [
             'number' => '02',
             'title' => 'Stubborn Dark Spots',
             'description' => 'Pigmentation that may not improve with your regular skincare routine alone.',
-            'image_url' => get_template_directory_uri() . '/assets/images/lumecca/problem-dark-spots.jpg',
+            'image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/problem-dark-spots.jpg',
             'image_alt' => 'Facial skin showing visible pigmentation and dark spots',
         ],
         [
             'number' => '03',
             'title' => 'Facial Redness',
             'description' => 'Visible redness and certain vascular concerns that can affect your complexion.',
-            'image_url' => get_template_directory_uri() . '/assets/images/lumecca/problem-redness.jpg',
+            'image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/problem-redness.jpg',
             'image_alt' => 'Facial skin showing visible redness',
         ],
     ],
@@ -97,7 +97,7 @@ $lumecca_how_args = [
 
     'process_title' => 'How It Works',
 
-    'treatment_image_url' => get_template_directory_uri() . '/assets/images/lumecca/how-lumecca-works.jpg',
+    'treatment_image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/how-lumecca-works.jpg',
     'treatment_image_alt' => 'Lumecca IPL photofacial treatment being performed',
 
     'steps' => [
@@ -166,15 +166,15 @@ $lumecca_areas_args = [
 
     'images' => [
         [
-            'image_url' => get_template_directory_uri() . '/assets/images/lumecca/areas-sunspots.jpg',
+            'image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/areas-sunspots.jpg',
             'image_alt' => 'Lumecca IPL treatment for visible sunspots',
         ],
         [
-            'image_url' => get_template_directory_uri() . '/assets/images/lumecca/areas-pigmentation.jpg',
+            'image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/areas-pigmentation.jpg',
             'image_alt' => 'Professional facial treatment for pigmentation',
         ],
         [
-            'image_url' => get_template_directory_uri() . '/assets/images/lumecca/areas-redness.jpg',
+            'image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/areas-redness.jpg',
             'image_alt' => 'Professional IPL treatment for facial redness',
         ],
     ],
@@ -213,24 +213,66 @@ $lumecca_areas_args = [
 |--------------------------------------------------------------------------
 */
 
-$lumecca_results_args = [
+
+$results_section = [
+
     'section_tag' => 'RESULTS',
 
     'section_title' => 'See the Difference.',
 
-    'section_description' => 'Real results from Lumecca IPL treatments.',
+    'section_description' =>
+        'Real results from Lumecca IPL treatments.',
 
-    'before_image_url' => get_template_directory_uri() . '/assets/images/lumecca/results-before.jpg',
-    'before_image_alt' => 'Before Lumecca IPL photofacial treatment',
-    
+    'results' => [
 
-    'after_image_url' => get_template_directory_uri() . '/assets/images/lumecca/results-after.jpg',
-    'after_image_alt' => 'After Lumecca IPL photofacial treatment',
-    
+        [
+            'before_image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/before-01.jpg',
+            'after_image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/after-01.jpg',
 
-    'disclaimer' => 'Every skin journey is unique, and results may vary.',
+            'before_image_alt' => 'Skin before Lumecca IPL treatment',
+            'after_image_alt' => 'Skin after Lumecca IPL treatment',
+
+            'caption' => 'Visible improvement in skin appearance.',
+        ],
+
+        [
+            'before_image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/before-02.jpg',
+            'after_image_url' => get_template_directory_uri() . '/images/bs_assets/lumecca/after-02.jpg',
+
+            'before_image_alt' => 'Skin before IPL treatment',
+            'after_image_alt' => 'Skin after IPL treatment',
+
+            'caption' => 'A more even-looking skin tone.',
+        ],
+
+       
+
+    ],
+
+    'disclaimer' =>
+        'Every skin journey is unique, and results may vary.',
+
 ];
 
+
+/*=========================================================
+= FINAL CTA
+=========================================================*/
+
+$lumecca_final_cta_args = [
+
+    'section_tag' => 'BOOK YOUR CONSULTATION',
+
+    'section_title' => 'Ready For A More Radiant-Looking Complexion?',
+
+    'section_description' =>
+    'Take the next step towards clearer, more even-looking skin. Discover how Lumecca IPL can help address visible pigmentation, sun damage and redness with a personalized treatment approach at Wanderlust Aesthetics.',
+
+    'service_name' => 'Lumecca IPL Treatment',
+
+    'form_shortcode' => '[contact-form-7 id="7d8ba4f" title="BS Landing Page Contact Form"]'
+
+];
 
 /*
 |--------------------------------------------------------------------------
@@ -248,6 +290,11 @@ get_template_part('template-parts/lumecca-why-wanderlust', null, $lumecca_why_ar
 
 get_template_part('template-parts/lumecca-areas', null, $lumecca_areas_args);
 
-get_template_part('template-parts/lumecca-results', null, $lumecca_results_args);
+get_template_part('template-parts/lumecca-results',null, $results_section );
 
-get_footer();
+get_template_part(
+    'template-parts/lumecca-final-cta',
+    null,
+    $lumecca_final_cta_args
+);
+get_footer("lumecca");

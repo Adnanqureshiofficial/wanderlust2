@@ -2,10 +2,19 @@
 
 function bs_wanderlust_assets() {
 
-<<<<<<< HEAD
-    // Load the existing landing page CSS and JS on other pages only
-    if ( ! is_page_template('lummeca-ipl-bs.php') ) {
+    if ( is_page_template( array( 'lumecca-ipl-bs.php', 'morpheus-landing-page-bs.php' ) ) ) {
 
+        // Load Lumecca stylesheet on Lumecca and Morpheus landing pages
+        wp_enqueue_style(
+            'wanderlust-lumecca',
+            get_template_directory_uri() . '/assets/css/lumecca.css',
+            [],
+            '1.0'
+        );
+
+    } else {
+
+        // Load general assets on all other pages
         wp_enqueue_style(
             'wanderlust-bs-main',
             get_template_directory_uri() . '/assets/css/bs-style.css',
@@ -20,49 +29,17 @@ function bs_wanderlust_assets() {
             '1.0',
             true
         );
-=======
-    
 
-    wp_enqueue_style(
-        'wanderlust-bs-main',
-        get_template_directory_uri() . '/assets/css/bs-style.css',
-        [],
-        '1.0'
-    );  
-
-    wp_enqueue_script(
-        'wanderlust-script',
-        get_template_directory_uri() . '/assets/script/bs-script.js',
-        [],
-        '1.0',
-        true
-    );
+    }
 
 }
-
 add_action( 'wp_enqueue_scripts', 'bs_wanderlust_assets' );
->>>>>>> 9ac5ab6730dd748afa5bbdae9cd222569be50fb6
 
-    }
 
-    // Load only the Lumecca stylesheet on the Lumecca template
-    if ( is_page_template('lummeca-ipl-bs.php') ) {
-
-        wp_enqueue_style(
-            'wanderlust-lumecca',
-            get_template_directory_uri() . '/assets/css/lumecca.css',
-            [],
-            '1.0'
-        );
-
-    }
-
-}
 
 // The Below enqueue function was preventing our CTA buttons to scroll to the form section and was reloading page so i added a if condition to not enqueue this on our tempalte pages.
 
 
-<<<<<<< HEAD
 // to be used iin live env
 // function bs_wanderlust_assets() {
 //     // Only load these assets if the page is using one of your 3 templates
@@ -90,7 +67,6 @@ add_action( 'wp_enqueue_scripts', 'bs_wanderlust_assets' );
 //             '1.0',
 //             true
 //         );
-=======
 // How did i find this?
 // i checked the network tab after the clicking the cta button. so when it reloaded and fetched the document again. I checked the initiator who initiated the request and found this ajax function
 // Enqueue AJAX script
@@ -104,7 +80,6 @@ add_action( 'wp_enqueue_scripts', 'bs_wanderlust_assets' );
 //         is_page_template('templates/botox-landing-page-bs.php')
 //     ) {
 //         return;
->>>>>>> 9ac5ab6730dd748afa5bbdae9cd222569be50fb6
 //     }
 
 //     wp_enqueue_script('treatment-ajax-filter', get_template_directory_uri() . '/assets/script/treatment-ajax-filter.js', array('jquery'), '1.0', true);
